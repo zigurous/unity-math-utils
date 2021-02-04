@@ -1,0 +1,15 @@
+{
+    "name": "Zigurous.Math.Editor",
+    "references": [
+        "GUID:5ee7542a03445cc488c2ff3178d93e1b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
