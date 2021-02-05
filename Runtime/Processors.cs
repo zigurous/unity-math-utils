@@ -87,58 +87,6 @@ namespace Zigurous.Math
         public static Vector3 Clamp01(Vector3 input) => new Vector3(Clamp01(input.x), Clamp01(input.y), Clamp01(input.z));
 
         /// <summary>
-        /// Clamps the input to the [min..max] range. If the
-        /// value exceeds max it wraps around to min, and if
-        /// the value is less than min it wraps back to max.
-        /// </summary>
-        public static float ClampWrap(float input, float min, float max)
-        {
-            float delta = max - min;
-            while (input < min) { input += delta; }
-            while (input > max) { input -= delta; }
-            return input;
-        }
-
-        /// <summary>
-        /// Clamps the input to the [min..max] range. If the
-        /// value exceeds max it wraps around to min, and if
-        /// the value is less than min it wraps back to max.
-        /// </summary>
-        public static double ClampWrap(double input, double min, double max)
-        {
-            double delta = max - min;
-            while (input < min) { input += delta; }
-            while (input > max) { input -= delta; }
-            return input;
-        }
-
-        /// <summary>
-        /// Clamps the input to the [min..max] range. If the
-        /// value exceeds max it wraps around to min, and if
-        /// the value is less than min it wraps back to max.
-        /// </summary>
-        public static int ClampWrap(int input, int min, int max)
-        {
-            int delta = max - min;
-            while (input < min) { input += delta; }
-            while (input > max) { input -= delta; }
-            return input;
-        }
-
-        /// <summary>
-        /// Clamps the input to the [min..max] range. If the
-        /// value exceeds max it wraps around to min, and if
-        /// the value is less than min it wraps back to max.
-        /// </summary>
-        public static uint ClampWrap(uint input, uint min, uint max)
-        {
-            uint delta = max - min;
-            while (input < min) { input += delta; }
-            while (input > max) { input -= delta; }
-            return input;
-        }
-
-        /// <summary>
         /// Decays the input back to zero over time by the
         /// decayRate * Time.deltaTime.
         /// </summary>
@@ -245,6 +193,58 @@ namespace Zigurous.Math
         /// Multiplies all input values by x along the X axis, by y along the Y axis, and by z along the Z axis.
         /// </summary>
         public static Vector3 Scale(Vector3 input, float x, float y, float z) => new Vector3(input.x * x, input.y * y, input.z * z);
+
+        /// <summary>
+        /// Wraps the input to the [min..max] range. If the
+        /// value exceeds max it wraps around to min, and if
+        /// the value is less than min it wraps back to max.
+        /// </summary>
+        public static float Wrap(float input, float min, float max)
+        {
+            float delta = max - min;
+            while (input < min) { input += delta; }
+            while (input > max) { input -= delta; }
+            return input;
+        }
+
+        /// <summary>
+        /// Wraps the input to the [min..max] range. If the
+        /// value exceeds max it wraps around to min, and if
+        /// the value is less than min it wraps back to max.
+        /// </summary>
+        public static double Wrap(double input, double min, double max)
+        {
+            double delta = max - min;
+            while (input < min) { input += delta; }
+            while (input > max) { input -= delta; }
+            return input;
+        }
+
+        /// <summary>
+        /// Wraps the input to the [min..max] range. If the
+        /// value exceeds max it wraps around to min, and if
+        /// the value is less than min it wraps back to max.
+        /// </summary>
+        public static int Wrap(int input, int min, int max)
+        {
+            int delta = max - min;
+            while (input < min) { input += delta; }
+            while (input > max) { input -= delta; }
+            return input;
+        }
+
+        /// <summary>
+        /// Wraps the input to the [min..max] range. If the
+        /// value exceeds max it wraps around to min, and if
+        /// the value is less than min it wraps back to max.
+        /// </summary>
+        public static uint Wrap(uint input, uint min, uint max)
+        {
+            uint delta = max - min;
+            while (input < min) { input += delta; }
+            while (input > max) { input -= delta; }
+            return input;
+        }
 
     }
 

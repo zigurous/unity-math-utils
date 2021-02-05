@@ -54,29 +54,12 @@ namespace Zigurous
             vector.w = Math.Processors.Clamp(vector.w, min.w, max.w);
         }
 
-        public static void ClampWrap(this ref Vector4 vector, Vector4 min, Vector4 max)
-        {
-            vector.x = Math.Processors.ClampWrap(vector.x, min.x, max.x);
-            vector.y = Math.Processors.ClampWrap(vector.y, min.y, max.y);
-            vector.z = Math.Processors.ClampWrap(vector.z, min.z, max.z);
-            vector.w = Math.Processors.ClampWrap(vector.w, min.w, max.w);
-        }
-
         public static Vector4 Clamped(this Vector4 vector, Vector4 min, Vector4 max)
         {
             vector.x = Math.Processors.Clamp(vector.x, min.x, max.x);
             vector.y = Math.Processors.Clamp(vector.y, min.y, max.y);
             vector.z = Math.Processors.Clamp(vector.z, min.z, max.z);
             vector.w = Math.Processors.Clamp(vector.w, min.w, max.w);
-            return vector;
-        }
-
-        public static Vector4 ClampedWrap(this Vector4 vector, Vector4 min, Vector4 max)
-        {
-            vector.x = Math.Processors.ClampWrap(vector.x, min.x, max.x);
-            vector.y = Math.Processors.ClampWrap(vector.y, min.y, max.y);
-            vector.z = Math.Processors.ClampWrap(vector.z, min.z, max.z);
-            vector.w = Math.Processors.ClampWrap(vector.w, min.w, max.w);
             return vector;
         }
 
@@ -209,6 +192,23 @@ namespace Zigurous
             vector.y = value;
             vector.z = value;
             vector.w = value;
+            return vector;
+        }
+
+        public static void Wrap(this ref Vector4 vector, Vector4 min, Vector4 max)
+        {
+            vector.x = Math.Processors.Wrap(vector.x, min.x, max.x);
+            vector.y = Math.Processors.Wrap(vector.y, min.y, max.y);
+            vector.z = Math.Processors.Wrap(vector.z, min.z, max.z);
+            vector.w = Math.Processors.Wrap(vector.w, min.w, max.w);
+        }
+
+        public static Vector4 Wrapped(this Vector4 vector, Vector4 min, Vector4 max)
+        {
+            vector.x = Math.Processors.Wrap(vector.x, min.x, max.x);
+            vector.y = Math.Processors.Wrap(vector.y, min.y, max.y);
+            vector.z = Math.Processors.Wrap(vector.z, min.z, max.z);
+            vector.w = Math.Processors.Wrap(vector.w, min.w, max.w);
             return vector;
         }
 

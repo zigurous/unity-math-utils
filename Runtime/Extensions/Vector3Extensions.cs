@@ -50,26 +50,11 @@ namespace Zigurous
             vector.z = Math.Processors.Clamp(vector.z, min.z, max.z);
         }
 
-        public static void ClampWrap(this ref Vector3 vector, Vector3 min, Vector3 max)
-        {
-            vector.x = Math.Processors.ClampWrap(vector.x, min.x, max.x);
-            vector.y = Math.Processors.ClampWrap(vector.y, min.y, max.y);
-            vector.z = Math.Processors.ClampWrap(vector.z, min.z, max.z);
-        }
-
         public static Vector3 Clamped(this Vector3 vector, Vector3 min, Vector3 max)
         {
             vector.x = Math.Processors.Clamp(vector.x, min.x, max.x);
             vector.y = Math.Processors.Clamp(vector.y, min.y, max.y);
             vector.z = Math.Processors.Clamp(vector.z, min.z, max.z);
-            return vector;
-        }
-
-        public static Vector3 ClampedWrap(this Vector3 vector, Vector3 min, Vector3 max)
-        {
-            vector.x = Math.Processors.ClampWrap(vector.x, min.x, max.x);
-            vector.y = Math.Processors.ClampWrap(vector.y, min.y, max.y);
-            vector.z = Math.Processors.ClampWrap(vector.z, min.z, max.z);
             return vector;
         }
 
@@ -186,6 +171,21 @@ namespace Zigurous
             vector.x = value;
             vector.y = value;
             vector.z = value;
+            return vector;
+        }
+
+        public static void Wrap(this ref Vector3 vector, Vector3 min, Vector3 max)
+        {
+            vector.x = Math.Processors.Wrap(vector.x, min.x, max.x);
+            vector.y = Math.Processors.Wrap(vector.y, min.y, max.y);
+            vector.z = Math.Processors.Wrap(vector.z, min.z, max.z);
+        }
+
+        public static Vector3 Wrapped(this Vector3 vector, Vector3 min, Vector3 max)
+        {
+            vector.x = Math.Processors.Wrap(vector.x, min.x, max.x);
+            vector.y = Math.Processors.Wrap(vector.y, min.y, max.y);
+            vector.z = Math.Processors.Wrap(vector.z, min.z, max.z);
             return vector;
         }
 
