@@ -201,10 +201,13 @@ namespace Zigurous.Math
         /// </summary>
         public static float Wrap(float input, float min, float max)
         {
-            float delta = max - min;
-            while (input < min) { input += delta; }
-            while (input > max) { input -= delta; }
-            return input;
+            if (input < min) {
+                return max - (min - input) % (max - min);
+            } else if (input > max) {
+                return min + (input - min) % (max - min);
+            } else {
+                return input;
+            }
         }
 
         /// <summary>
@@ -214,36 +217,41 @@ namespace Zigurous.Math
         /// </summary>
         public static double Wrap(double input, double min, double max)
         {
-            double delta = max - min;
-            while (input < min) { input += delta; }
-            while (input > max) { input -= delta; }
-            return input;
+            if (input < min) {
+                return max - (min - input) % (max - min);
+            } else if (input > max) {
+                return min + (input - min) % (max - min);
+            } else {
+                return input;
+            }
         }
 
         /// <summary>
-        /// Wraps the input to the [min..max] range. If the
+        /// Wraps the input to the [min..max) range. If the
         /// value exceeds max it wraps around to min, and if
         /// the value is less than min it wraps back to max.
         /// </summary>
         public static int Wrap(int input, int min, int max)
         {
-            int delta = max - min;
-            while (input < min) { input += delta; }
-            while (input > max) { input -= delta; }
-            return input;
+            if (input < min) {
+                return max - (min - input) % (max - min);
+            } else {
+                return min + (input - min) % (max - min);
+            }
         }
 
         /// <summary>
-        /// Wraps the input to the [min..max] range. If the
+        /// Wraps the input to the [min..max) range. If the
         /// value exceeds max it wraps around to min, and if
         /// the value is less than min it wraps back to max.
         /// </summary>
         public static uint Wrap(uint input, uint min, uint max)
         {
-            uint delta = max - min;
-            while (input < min) { input += delta; }
-            while (input > max) { input -= delta; }
-            return input;
+            if (input < min) {
+                return max - (min - input) % (max - min);
+            } else {
+                return min + (input - min) % (max - min);
+            }
         }
 
     }
