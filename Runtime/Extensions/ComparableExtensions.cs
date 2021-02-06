@@ -30,6 +30,20 @@ namespace Zigurous.Math
             return max;
         }
 
+        public static T Max<T>(this List<T> list) where T: IComparable<T>
+        {
+            T max = default(T);
+
+            foreach (T item in list)
+            {
+                if (item.CompareTo(max) > 0) {
+                    max = item;
+                }
+            }
+
+            return max;
+        }
+
         public static T Min<T>(this T[] array) where T: IComparable<T>
         {
             T min = default(T);
@@ -40,6 +54,19 @@ namespace Zigurous.Math
 
                 if (element.CompareTo(min) < 0) {
                     min = element;
+                }
+            }
+
+            return min;
+        }
+        public static T Min<T>(this List<T> list) where T: IComparable<T>
+        {
+            T min = default(T);
+
+            foreach (T item in list)
+            {
+                if (item.CompareTo(min) < 0) {
+                    min = item;
                 }
             }
 
