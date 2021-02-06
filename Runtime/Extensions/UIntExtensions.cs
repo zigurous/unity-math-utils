@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Zigurous
+namespace Zigurous.Math
 {
     public static class UIntExtensions
     {

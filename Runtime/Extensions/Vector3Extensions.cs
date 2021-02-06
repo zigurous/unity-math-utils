@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Zigurous
+namespace Zigurous.Math
 {
     public static class Vector3Extensions
     {

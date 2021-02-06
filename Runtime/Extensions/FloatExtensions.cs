@@ -1,4 +1,4 @@
-﻿namespace Zigurous
+﻿namespace Zigurous.Math
 {
     public static class FloatExtensions
     {
