@@ -1,8 +1,8 @@
 {
   "name": "com.zigurous.math",
   "version": "0.1.0",
-  "displayName": "Math Functions",
-  "description": "A collection of utility math functions for Unity projects.",
+  "displayName": "Zigurous Math Functions",
+  "description": "A collection of utility math functions.",
   "unity": "2019.4",
   "author": {
     "name": "Zigurous",
