@@ -5,10 +5,9 @@ namespace Zigurous.Math
     public static class Processors
     {
         /// <summary>
-        /// An axis deadzone scales the input such that any
-        /// value with an absolute value smaller than min is 0,
-        /// and any value with an absolute value larger than
-        /// max is 1 or -1.
+        /// An axis deadzone scales the input such that any value with an
+        /// absolute value smaller than min is 0, and any value with an absolute
+        /// value larger than max is 1 or -1.
         /// </summary>
         public static float AxisDeadzone(float input, float min = 0.125f, float max = 0.925f)
         {
@@ -87,8 +86,8 @@ namespace Zigurous.Math
         public static Vector3 Clamp01(Vector3 input) => new Vector3(Clamp01(input.x), Clamp01(input.y), Clamp01(input.z));
 
         /// <summary>
-        /// Decays the input back to zero over time by the
-        /// decayRate * Time.deltaTime.
+        /// Decays the input back to zero over time by the decayRate *
+        /// Time.deltaTime.
         /// </summary>
         public static float Decay(float input, float decayRate, float zero = 0.0f)
         {
@@ -110,9 +109,8 @@ namespace Zigurous.Math
         public static Vector2 Invert(Vector2 input) => input * -1.0f;
 
         /// <summary>
-        /// Inverts the input values by multiplying by -1.
-        /// Inverts the x axis of the vector if invertX is true,
-        /// and the y axis if invertY is true.
+        /// Inverts the input values by multiplying by -1. Inverts the x axis of
+        /// the vector if invertX is true, and the y axis if invertY is true.
         /// </summary>
         public static Vector2 Invert(Vector2 input, bool invertX, bool invertY)
         {
@@ -128,10 +126,9 @@ namespace Zigurous.Math
         public static Vector3 Invert(Vector3 input) => input * -1.0f;
 
         /// <summary>
-        /// Inverts the input values by multiplying by -1.
-        /// Inverts the x axis of the vector if invertX is true,
-        /// the y axis if invertY is true, and the z axis if invertZ
-        /// is true.
+        /// Inverts the input values by multiplying by -1. Inverts the x axis of
+        /// the vector if invertX is true, the y axis if invertY is true, and
+        /// the z axis if invertZ is true.
         /// </summary>
         public static Vector3 Invert(Vector3 input, bool invertX, bool invertY, bool invertZ)
         {
@@ -143,10 +140,9 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Normalizes the input in the range [min..max] to
-        /// unsigned normalized form [0..1] if min is >= zero,
-        /// and to signed normalized form [-1..1] if min is less
-        /// than zero.
+        /// Normalizes the input in the range [min..max] to unsigned normalized
+        /// form [0..1] if min is >= zero, and to signed normalized form [-1..1]
+        /// if min is less than zero.
         /// </summary>
         public static float Normalize(float input, float min, float max, float zero = 0.0f)
         {
@@ -158,14 +154,14 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Normalizes the input vector to be of unit length (1).
-        /// This is the same as calling Vector2.normalized.
+        /// Normalizes the input vector to be of unit length (1). This is the
+        /// same as calling Vector2.normalized.
         /// </summary>
         public static Vector2 Normalize(Vector2 input) => input.normalized;
 
         /// <summary>
-        /// Normalizes the input vector to be of unit length (1).
-        /// This is the same as calling Vector3.normalized.
+        /// Normalizes the input vector to be of unit length (1). This is the
+        /// same as calling Vector3.normalized.
         /// </summary>
         public static Vector3 Normalize(Vector3 input) => input.normalized;
 
@@ -180,7 +176,8 @@ namespace Zigurous.Math
         public static Vector2 Scale(Vector2 input, float factor) => input * factor;
 
         /// <summary>
-        /// Multiplies all input values by x along the X axis and by y along the Y axis.
+        /// Multiplies all input values by x along the X axis and by y along the
+        /// Y axis.
         /// </summary>
         public static Vector2 Scale(Vector2 input, float x, float y) => new Vector2(input.x * x, input.y * y);
 
@@ -190,14 +187,15 @@ namespace Zigurous.Math
         public static Vector3 Scale(Vector3 input, float factor) => input * factor;
 
         /// <summary>
-        /// Multiplies all input values by x along the X axis, by y along the Y axis, and by z along the Z axis.
+        /// Multiplies all input values by x along the X axis, by y along the Y
+        /// axis, and by z along the Z axis.
         /// </summary>
         public static Vector3 Scale(Vector3 input, float x, float y, float z) => new Vector3(input.x * x, input.y * y, input.z * z);
 
         /// <summary>
-        /// Wraps the input to the [min..max] range. If the
-        /// value exceeds max it wraps around to min, and if
-        /// the value is less than min it wraps back to max.
+        /// Wraps the input to the [min..max] range. If the value exceeds max it
+        /// wraps around to min, and if the value is less than min it wraps back
+        /// to max.
         /// </summary>
         public static float Wrap(float input, float min, float max)
         {
@@ -211,9 +209,9 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Wraps the input to the [min..max] range. If the
-        /// value exceeds max it wraps around to min, and if
-        /// the value is less than min it wraps back to max.
+        /// Wraps the input to the [min..max] range. If the value exceeds max it
+        /// wraps around to min, and if the value is less than min it wraps back
+        /// to max.
         /// </summary>
         public static double Wrap(double input, double min, double max)
         {
@@ -227,9 +225,9 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Wraps the input to the [min..max) range. If the
-        /// value exceeds max it wraps around to min, and if
-        /// the value is less than min it wraps back to max.
+        /// Wraps the input to the [min..max) range. If the value exceeds max it
+        /// wraps around to min, and if the value is less than min it wraps back
+        /// to max.
         /// </summary>
         public static int Wrap(int input, int min, int max)
         {
@@ -241,9 +239,9 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Wraps the input to the [min..max) range. If the
-        /// value exceeds max it wraps around to min, and if
-        /// the value is less than min it wraps back to max.
+        /// Wraps the input to the [min..max) range. If the value exceeds max it
+        /// wraps around to min, and if the value is less than min it wraps back
+        /// to max.
         /// </summary>
         public static uint Wrap(uint input, uint min, uint max)
         {

@@ -3,10 +3,9 @@
     public static class FloatExtensions
     {
         /// <summary>
-        /// Sometimes Unity throws precision errors for really
-        /// small numbers such as when setting transform values.
-        /// Using float.Epsilon can still cause issues so this
-        /// value is intended to be a safer alternative.
+        /// Sometimes Unity throws precision errors for really small numbers
+        /// such as when setting transform values. Using float.Epsilon can still
+        /// cause issues so this value is intended to be a safer alternative.
         /// </summary>
         public const float SAFE_FLOAT = 1.4E-32f;
 

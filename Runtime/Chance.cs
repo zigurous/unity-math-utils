@@ -39,9 +39,8 @@
         };
 
         /// <summary>
-        /// Returns a random value from an array with
-        /// probability proportional to a given set of
-        /// frequencies.
+        /// Returns a random value from an array with probability proportional
+        /// to a given set of frequencies.
         /// </summary>
         public static T Roll<T>(T[] values, int[] frequencies)
         {
@@ -114,7 +113,8 @@
         public static int D10() => UnityEngine.Random.Range(1, 11);
 
         /// <summary>
-        /// Returns the sum of rolling a 10-sided dice (1-10), x amount of times.
+        /// Returns the sum of rolling a 10-sided dice (1-10), x amount of
+        /// times.
         /// </summary>
         public static int D10(int x)
         {
@@ -129,7 +129,8 @@
         public static int D12() => UnityEngine.Random.Range(1, 13);
 
         /// <summary>
-        /// Returns the sum of rolling a 12-sided dice (1-12), x amount of times.
+        /// Returns the sum of rolling a 12-sided dice (1-12), x amount of
+        /// times.
         /// </summary>
         public static int D12(int x)
         {
@@ -144,7 +145,8 @@
         public static int D20() => UnityEngine.Random.Range(1, 21);
 
         /// <summary>
-        /// Returns the sum of rolling a 20-sided dice (1-20), x amount of times.
+        /// Returns the sum of rolling a 20-sided dice (1-20), x amount of
+        /// times.
         /// </summary>
         public static int D20(int x)
         {
@@ -174,7 +176,8 @@
         public static int CustomDiceRoll(int[] values) => values[UnityEngine.Random.Range(0, values.Length)];
 
         /// <summary>
-        /// Returns the sum of rolling a dice with custom values, x amount of times.
+        /// Returns the sum of rolling a dice with custom values, x amount of
+        /// times.
         /// </summary>
         public static int CustomDiceRoll(int[] values, int x)
         {
