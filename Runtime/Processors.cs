@@ -2,6 +2,9 @@
 
 namespace Zigurous.Math
 {
+    /// <summary>
+    /// Provides functions for processing input values.
+    /// </summary>
     public static class Processors
     {
         /// <summary>

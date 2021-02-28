@@ -1,5 +1,8 @@
 ﻿namespace Zigurous.Math
 {
+    /// <summary>
+    /// Provides functions for generating random chance values.
+    /// </summary>
     public static class Chance
     {
         public enum Coin { Heads, Tails }
@@ -187,7 +190,7 @@
         }
 
         /// <summary>
-        /// Returns `true` or `false`, with 50-50 odds.
+        /// Returns true or false, with 50-50 odds.
         /// </summary>
         public static bool RandomBool() => UnityEngine.Random.value < 0.5f;
 
@@ -197,7 +200,7 @@
         public static Coin CoinFlip() => UnityEngine.Random.value < 0.5f ? Coin.Heads : Coin.Tails;
 
         /// <summary>
-        /// Returns `1.0f` or `-1.0f`, with 50-50 odds.
+        /// Returns 1.0f or -1.0f, with 50-50 odds.
         /// </summary>
         public static float PositiveOrNegative() => UnityEngine.Random.value < 0.5f ? 1.0f : -1.0f;
 
