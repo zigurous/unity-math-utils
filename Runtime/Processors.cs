@@ -58,32 +58,42 @@ namespace Zigurous.Math
         /// <summary>
         /// Clamps the input to the [min..max] range.
         /// </summary>
+        public static Vector4 Clamp(Vector4 input, Vector4 min, Vector4 max) => new Vector4(Clamp(input.x, min.x, max.x), Clamp(input.y, min.y, max.y), Clamp(input.z, min.z, max.z), Clamp(input.w, min.w, max.w));
+
+        /// <summary>
+        /// Clamps the input to the range [0..1].
+        /// </summary>
         public static int Clamp01(int input) => input < 0 ? 0 : (input > 1 ? 1 : input);
 
         /// <summary>
-        /// Clamps the input to the [min..max] range.
+        /// Clamps the input to the range [0..1].
         /// </summary>
         public static uint Clamp01(uint input) => input < 0 ? 0 : (input > 1 ? 1 : input);
 
         /// <summary>
-        /// Clamps the input to the [min..max] range.
+        /// Clamps the input to the range [0..1].
         /// </summary>
         public static float Clamp01(float input) => input < 0.0f ? 0.0f : (input > 1.0f ? 1.0f : input);
 
         /// <summary>
-        /// Clamps the input to the [min..max] range.
+        /// Clamps the input to the range [0..1].
         /// </summary>
         public static double Clamp01(double input) => input < 0.0 ? 0.0 : (input > 1.0 ? 1.0 : input);
 
         /// <summary>
-        /// Clamps the input to the [min..max] range.
+        /// Clamps the input to the range [0..1].
         /// </summary>
         public static Vector2 Clamp01(Vector2 input) => new Vector2(Clamp01(input.x), Clamp01(input.y));
 
         /// <summary>
-        /// Clamps the input to the [min..max] range.
+        /// Clamps the input to the range [0..1].
         /// </summary>
         public static Vector3 Clamp01(Vector3 input) => new Vector3(Clamp01(input.x), Clamp01(input.y), Clamp01(input.z));
+
+        /// <summary>
+        /// Clamps the input to the range [0..1].
+        /// </summary>
+        public static Vector4 Clamp01(Vector4 input) => new Vector4(Clamp01(input.x), Clamp01(input.y), Clamp01(input.z), Clamp01(input.w));
 
         /// <summary>
         /// Decays the input back to zero over time by the decayRate *
@@ -140,6 +150,26 @@ namespace Zigurous.Math
         }
 
         /// <summary>
+        /// Inverts the input values by multiplying by -1.
+        /// </summary>
+        public static Vector4 Invert(Vector4 input) => input * -1.0f;
+
+        /// <summary>
+        /// Inverts the input values by multiplying by -1. Inverts the x axis of
+        /// the vector if invertX is true, the y axis if invertY is true, the z
+        /// axis if invertZ is true, and the w axis if invertW is true.
+        /// </summary>
+        public static Vector4 Invert(Vector4 input, bool invertX, bool invertY, bool invertZ, bool invertW)
+        {
+            Vector4 inverted = input;
+            if (invertX) inverted.x *= -1.0f;
+            if (invertY) inverted.y *= -1.0f;
+            if (invertZ) inverted.z *= -1.0f;
+            if (invertW) inverted.w *= -1.0f;
+            return inverted;
+        }
+
+        /// <summary>
         /// Normalizes the input in the range [min..max] to unsigned normalized
         /// form [0..1] if min is >= zero, and to signed normalized form [-1..1]
         /// if min is less than zero.
@@ -164,6 +194,12 @@ namespace Zigurous.Math
         /// same as calling Vector3.normalized.
         /// </summary>
         public static Vector3 Normalize(Vector3 input) => input.normalized;
+
+        /// <summary>
+        /// Normalizes the input vector to be of unit length (1). This is the
+        /// same as calling Vector4.normalized.
+        /// </summary>
+        public static Vector4 Normalize(Vector4 input) => input.normalized;
 
         /// <summary>
         /// Multiplies the input by factor.
@@ -191,6 +227,17 @@ namespace Zigurous.Math
         /// axis, and by z along the Z axis.
         /// </summary>
         public static Vector3 Scale(Vector3 input, float x, float y, float z) => new Vector3(input.x * x, input.y * y, input.z * z);
+
+        /// <summary>
+        /// Multiplies the input vector by factor.
+        /// </summary>
+        public static Vector4 Scale(Vector4 input, float factor) => input * factor;
+
+        /// <summary>
+        /// Multiplies all input values by x along the X axis, by y along the Y
+        /// axis, by z along the Z axis, and w along the W axis.
+        /// </summary>
+        public static Vector4 Scale(Vector4 input, float x, float y, float z, float w) => new Vector4(input.x * x, input.y * y, input.z * z, input.w * w);
 
         /// <summary>
         /// Wraps the input to the [min..max] range. If the value exceeds max it
