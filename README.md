@@ -1,5 +1,7 @@
 # Math Functions
 
+The Math Functions package provides extensions and utilities for working with numbers including generating random chance values, processing inputs, and more.
+
 ## Installation
 
 The Unity Package Manager can load a package from a Git repository on a remote server.
