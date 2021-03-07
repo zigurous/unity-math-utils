@@ -4,7 +4,15 @@
   "displayName": "Zigurous Math Functions",
   "description": "The Math Functions package provides extensions and utilities for working with numbers including generating random chance values, processing inputs, and more.",
   "unity": "2019.4",
-  "keywords": ["math", "utilities", "random"],
+  "keywords": [
+    "math",
+    "utilities",
+    "random"
+  ],
+  "repository": "https://github.com/zigurous/unity-math-functions",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@zigurous"
+  },
   "author": {
     "name": "Zigurous",
     "email": "support@zigurous.com",
