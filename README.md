@@ -1,6 +1,6 @@
 # Math Functions
 
-The Math Functions package provides extensions and utilities for working with numbers including generating random chance values, processing inputs, and more.
+The Math Functions package provides extensions and utilities for working with numbers in Unity projects including generating random chance values, processing inputs, and more.
 
 ## Installation
 
