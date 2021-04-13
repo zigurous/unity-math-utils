@@ -1,6 +1,6 @@
 {
   "name": "com.zigurous.math",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "displayName": "Zigurous Math Functions",
   "description": "The Math Functions package provides extensions and utilities for working with numbers in Unity projects including generating random chance values, processing inputs, and more.",
   "unity": "2019.4",
