@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Zigurous.Math
 {
@@ -301,6 +301,36 @@ namespace Zigurous.Math
                 return max - (min - input) % (max - min);
             } else {
                 return min + (input - min) % (max - min);
+            }
+        }
+
+        /// <summary>
+        /// Wraps the input to the range [0..1]. If the value exceeds 1 it wraps
+        /// around to 0, and if the value is less than 0 it wraps back to 1.
+        /// </summary>
+        public static float Wrap01(float input)
+        {
+            if (input < 0.0f) {
+                return 1.0f + input % 1.0f;
+            } else if (input > 1.0f) {
+                return input % 1.0f;
+            } else {
+                return input;
+            }
+        }
+
+        /// <summary>
+        /// Wraps the input to the range [0..1]. If the value exceeds 1 it wraps
+        /// around to 0, and if the value is less than 0 it wraps back to 1.
+        /// </summary>
+        public static double Wrap01(double input)
+        {
+            if (input < 0.0) {
+                return 1.0 + input % 1.0;
+            } else if (input > 1.0) {
+                return input % 1.0;
+            } else {
+                return input;
             }
         }
 
