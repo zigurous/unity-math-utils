@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace Zigurous.Math
 {
@@ -104,10 +104,12 @@ namespace Zigurous.Math
         /// </summary>
         public static float Decay(float input, float decayRate, float zero = 0.0f)
         {
-            if (input >= zero) {
-                return System.Math.Max(input - (decayRate * Time.deltaTime), zero);
+            if (input > zero) {
+                return Mathf.Max(input - (decayRate * Time.deltaTime), zero);
+            } else if (input < zero) {
+                return Mathf.Min(input + (decayRate * Time.deltaTime), zero);
             } else {
-                return System.Math.Min(input + (decayRate * Time.deltaTime), zero);
+                return input;
             }
         }
 
