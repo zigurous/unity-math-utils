@@ -2,6 +2,12 @@
 
 The Math Functions package provides extensions and utilities for working with numbers in Unity projects including generating random chance values, processing inputs, and more.
 
+Import the package namespace in each class/script you want to use it. You may need to regenerate project files/assemblies first.
+
+```csharp
+using Zigurous.Math;
+```
+
 ## Installation
 
 The Unity Package Manager can load a package from a Git repository on a remote server.
