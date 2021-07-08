@@ -1,8 +1,4 @@
-# Math Utils
-
-The Math Utils package provides extensions and utilities for working with numbers in Unity projects including generating random chance values, processing inputs, and more.
-
-## Installation
+# Installation
 
 Use the Unity [Package Manager](https://docs.unity3d.com/Manual/upm-ui.html) to install the Math Utils package.
 
@@ -29,3 +25,9 @@ Import the package namespace in each script or file you want to use it.
 ```csharp
 using Zigurous.Math;
 ```
+
+### Source Code
+
+The source code for the Math Utils package is in the following repository:
+
+- https://github.com/zigurous/unity-math-utils
