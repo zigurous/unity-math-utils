@@ -1,5 +1,10 @@
+using System;
+
 namespace Zigurous.Math
 {
+    /// <summary>
+    /// Extension methods for arrays.
+    /// </summary>
     public static class ArrayExtensions
     {
         /// <summary>
@@ -41,6 +46,10 @@ namespace Zigurous.Math
             }
         }
 
+        /// <summary>
+        /// Returns the sum of all elements in the array.
+        /// </summary>
+        /// <param name="array">The array to sum.</param>
         public static int Sum(this int[] array)
         {
             int sum = 0;
@@ -52,6 +61,10 @@ namespace Zigurous.Math
             return sum;
         }
 
+        /// <summary>
+        /// Returns the sum of all elements in the array.
+        /// </summary>
+        /// <param name="array">The array to sum.</param>
         public static float Sum(this float[] array)
         {
             float sum = 0;
@@ -63,6 +76,10 @@ namespace Zigurous.Math
             return sum;
         }
 
+        /// <summary>
+        /// Returns the sum of all elements in the array.
+        /// </summary>
+        /// <param name="array">The array to sum.</param>
         public static double Sum(this double[] array)
         {
             double sum = 0;

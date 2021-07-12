@@ -1,49 +1,189 @@
 ﻿namespace Zigurous.Math
 {
+    /// <summary>
+    /// Extension methods for floats.
+    /// </summary>
     public static class FloatExtensions
     {
         /// <summary>
         /// Sometimes Unity throws precision errors for really small numbers
-        /// such as when setting transform values. Using float.Epsilon can still
-        /// cause issues so this value is intended to be a safer alternative.
+        /// such as when setting transform values. Using <c>float.Epsilon</c>
+        /// can still cause issues so this value is intended to be a safer
+        /// alternative.
         /// </summary>
         public const float SAFE_FLOAT = 1.4E-32f;
 
-        public static bool IsInRange(this float value, float min, float max) => value >= min && value <= max;
+        /// <summary>
+        /// Checks if the value is between <paramref name="min"/> and
+        /// <paramref name="max"/>.
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        /// <param name="min">The minimum value.</param>
+        /// <param name="max">The maximum value.</param>
+        public static bool IsBetween(this float value, float min, float max)
+        {
+            return value >= min && value <= max;
+        }
 
-        public static bool IsNaN(this float value) => float.IsNaN(value);
-        public static bool IsNotNaN(this float value) => !float.IsNaN(value);
+        /// <summary>
+        /// Checks if the value is <c>NaN</c>.
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        public static bool IsNaN(this float value)
+        {
+            return float.IsNaN(value);
+        }
 
-        public static bool IsInfinity(this float value) => float.IsInfinity(value);
-        public static bool IsNotInfinity(this float value) => !float.IsInfinity(value);
+        /// <summary>
+        /// Checks if the value is infinite.
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        public static bool IsInfinite(this float value)
+        {
+            return float.IsInfinity(value);
+        }
 
-        public static bool IsPositiveInfinity(this float value) => float.IsPositiveInfinity(value);
-        public static bool IsNegativeInfinity(this float value) => float.IsNegativeInfinity(value);
+        /// <summary>
+        /// Checks if the value is equal to positive infinity.
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        public static bool IsPositiveInfinity(this float value)
+        {
+            return float.IsPositiveInfinity(value);
+        }
 
-        public static bool IsRealNumber(this float value) => !float.IsInfinity(value) && !float.IsNaN(value);
-        public static bool IsImaginaryNumber(this float value) => float.IsInfinity(value) || float.IsNaN(value);
-        public static bool IsDividable(this float value) => value != 0.0f && !float.IsInfinity(value) && !float.IsNaN(value);
+        /// <summary>
+        /// Checks if the value is equal to negative infinity.
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        public static bool IsNegativeInfinity(this float value)
+        {
+            return float.IsNegativeInfinity(value);
+        }
 
-        public static bool IsPositive(this float value) => value > 0.0f;
-        public static bool IsNegative(this float value) => value < 0.0f;
+        /// <summary>
+        /// Checks if the value is a real number (not infinite and not
+        /// <c>NaN</c>).
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        public static bool IsRealNumber(this float value)
+        {
+            return !float.IsInfinity(value) && !float.IsNaN(value);
+        }
 
-        public static bool IsZero(this float value) => (value > -float.Epsilon) && (value < float.Epsilon);
-        public static bool IsZero(this float value, float epsilon) => (value > -epsilon) && (value < epsilon);
+        /// <summary>
+        /// Checks if the value is an imaginary number (infinite or <c>NaN</c>).
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        public static bool IsImaginaryNumber(this float value)
+        {
+            return float.IsInfinity(value) || float.IsNaN(value);
+        }
 
-        public static bool IsNotZero(this float value) => !((value > -float.Epsilon) && (value < float.Epsilon));
-        public static bool IsNotZero(this float value, float epsilon) => !((value > -epsilon) && (value < epsilon));
+        /// <summary>
+        /// Checks if the value can be divided (not zero, not infinite, and not
+        /// <c>NaN</c>).
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        public static bool IsDividable(this float value)
+        {
+            return value != 0.0f && !float.IsInfinity(value) && !float.IsNaN(value);
+        }
 
-        public static bool IsEqualTo(this float lhs, float rhs) => System.Math.Abs(lhs - rhs) < float.Epsilon;
-        public static bool IsEqualTo(this float lhs, float rhs, float epsilon) => System.Math.Abs(lhs - rhs) < epsilon;
+        /// <summary>
+        /// Checks if the value is positive.
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        public static bool IsPositive(this float value)
+        {
+            return value > 0.0f;
+        }
 
-        public static bool IsNotEqualTo(this float lhs, float rhs) => !(System.Math.Abs(lhs - rhs) < float.Epsilon);
-        public static bool IsNotEqualTo(this float lhs, float rhs, float epsilon) => !(System.Math.Abs(lhs - rhs) < epsilon);
+        /// <summary>
+        /// Checks if the value is negative.
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        public static bool IsNegative(this float value)
+        {
+            return value < 0.0f;
+        }
 
-        public static float NotImaginary(this float value, float newValue = 0.0f) => IsRealNumber(value) ? value : newValue;
-        public static float NotInfinity(this float value, float newValue = 0.0f) => IsNotInfinity(value) ? value : newValue;
-        public static float NotNaN(this float value, float newValue = 0.0f) => IsNotNaN(value) ? value : newValue;
-        public static float NotZero(this float value, float newValue = SAFE_FLOAT) => IsNotZero(value) ? value : newValue;
-        public static float NotZero(this float value, float newValue = SAFE_FLOAT, float epsilon = float.Epsilon) => IsNotZero(value, epsilon) ? value : newValue;
+        /// <summary>
+        /// Checks if the value is zero given a margin of error specified by the
+        /// <paramref name="epsilon"/>.
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        /// <param name="epsilon">The margin of error.</param>
+        public static bool IsZero(this float value, float epsilon = float.Epsilon)
+        {
+            return (value > -epsilon) && (value < epsilon);
+        }
+
+        /// <summary>
+        /// Checks for equality with another value given a margin of error
+        /// specified by the <paramref name="epsilon"/>
+        /// </summary>
+        /// <param name="lhs">The left-hand side of the equality check.</param>
+        /// <param name="rhs">The right-hand side of the equality check.</param>
+        /// <param name="epsilon">The margin of error.</param>
+        /// <returns>True if <paramref name="lhs"/> is considered equal to <paramref name="rhs"/>.</returns>
+        public static bool IsEqualTo(this float lhs, float rhs, float epsilon = float.Epsilon)
+        {
+            return System.Math.Abs(lhs - rhs) < epsilon;
+        }
+
+        /// <summary>
+        /// Sets the value to <paramref name="newValue"/> if the value is an
+        /// imaginary number (infinite or <c>NaN</c>).
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        /// <param name="newValue">The value to return if the original value is an imaginary number.</param>
+        public static void UnsetImaginary(this ref float value, float newValue = default(float))
+        {
+            if (IsImaginaryNumber(value)) {
+                value = newValue;
+            }
+        }
+
+        /// <summary>
+        /// Sets the value to <paramref name="newValue"/> if the value is an
+        /// infinite number.
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        /// <param name="newValue">The value to return if the original value is infinite.</param>
+        public static void UnsetInfinite(this ref float value, float newValue = default(float))
+        {
+            if (IsInfinite(value)) {
+                value = newValue;
+            }
+        }
+
+        /// <summary>
+        /// Sets the value to <paramref name="newValue"/> if the value is
+        /// <c>NaN</c>.
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        /// <param name="newValue">The value to return if the original value is <c>NaN</c>.</param>
+        public static void UnsetNaN(this ref float value, float newValue = default(float))
+        {
+            if (IsNaN(value)) {
+                value = newValue;
+            }
+        }
+
+        /// <summary>
+        /// Sets the value to <paramref name="newValue"/> if the value is zero
+        /// given a margin of error specified by the <paramref name="epsilon"/>.
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        /// <param name="newValue">The value to return if the original value is zero.</param>
+        /// <param name="epsilon">The margin of error.</param>
+        public static void UnsetZero(this ref float value, float newValue = SAFE_FLOAT, float epsilon = float.Epsilon)
+        {
+            if (IsZero(value, epsilon)) {
+                value = newValue;
+            }
+        }
 
     }
 

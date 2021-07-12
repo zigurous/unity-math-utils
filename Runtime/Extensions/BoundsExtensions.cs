@@ -1,9 +1,16 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Zigurous.Math
 {
+    /// <summary>
+    /// Extension methods for bounds.
+    /// </summary>
     public static class BoundsExtensions
     {
+        /// <summary>
+        /// Returns a random point inside the bounds.
+        /// </summary>
+        /// <param name="bounds">The bounds to get a random point from.</param>
         public static Vector3 RandomPointInside(this Bounds bounds)
         {
             return new Vector3(

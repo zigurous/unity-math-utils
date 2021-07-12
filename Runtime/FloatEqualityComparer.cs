@@ -3,7 +3,7 @@
 namespace Zigurous.Math
 {
     /// <summary>
-    /// Determines equality between float values given an amount of decimal
+    /// Compares the equality between float values given an amount of decimal
     /// digits to compare.
     /// </summary>
     public sealed class FloatEqualityComparer : IEqualityComparer<float>
@@ -14,14 +14,24 @@ namespace Zigurous.Math
         public int digits = 3;
 
         /// <summary>
-        /// Determines whether the specified floats are equal.
+        /// Checks the equality of two float values.
         /// </summary>
-        public bool Equals(float x, float y) => System.Math.Round(x, this.digits) == System.Math.Round(y, this.digits);
+        /// <param name="x">The first float value to compare.</param>
+        /// <param name="y">The second float value to compare.</param>
+        /// <returns>True if the values are equal, false otherwise.</returns>
+        public bool Equals(float x, float y)
+        {
+            return System.Math.Round(x, this.digits) == System.Math.Round(y, this.digits);
+        }
 
         /// <summary>
-        /// Returns a hash code for the specified float value.
+        /// Returns a hash code for the float value.
         /// </summary>
-        public int GetHashCode(float f) => System.Math.Round(f, this.digits).GetHashCode();
+        /// <param name="value">The float value to get the hash code for.</param>
+        public int GetHashCode(float value)
+        {
+            return System.Math.Round(value, this.digits).GetHashCode();
+        }
 
     }
 
