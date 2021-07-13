@@ -917,6 +917,23 @@ namespace Zigurous.Math
         }
 
         /// <summary>
+        /// A stick deadzone scales the input such that any value with a
+        /// magnitude smaller than <paramref name="min"/> results in (0,0), and
+        /// any value with a magnitude greater than <paramref name="max"/> is
+        /// normalized to unit length (1).
+        /// </summary>
+        /// <param name="input">The input value to scale.</param>
+        /// <param name="min">The lower deadzone threshold.</param>
+        /// <param name="max">The upper deadzone threshold.</param>
+        public static Vector2 StickDeadzone(Vector2 input, float min = 0.125f, float max = 0.925f)
+        {
+            float magnitude = input.magnitude;
+            if (magnitude < min) return Vector2.zero;
+            if (magnitude > max) return input.normalized;
+            return input;
+        }
+
+        /// <summary>
         /// Wraps the input to the range
         /// [<paramref name="min"/>..<paramref name="max"/>]. If the value
         /// exceeds <paramref name="max"/> it wraps around to
