@@ -29,3 +29,10 @@ Import the package namespace in each script or file you want to use it.
 ```csharp
 using Zigurous.Math;
 ```
+
+## Reference
+
+- [Input Processors](https://docs.zigurous.com/com.zigurous.math/manual/processors.html)
+- [Random Chance](https://docs.zigurous.com/com.zigurous.math/manual/chance.html)
+- [Number Abbreviations](https://docs.zigurous.com/com.zigurous.math/manual/abbreviations.html)
+- [Extension Methods](https://docs.zigurous.com/com.zigurous.math/manual/extensions.html)
