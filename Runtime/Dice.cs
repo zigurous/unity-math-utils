@@ -126,6 +126,46 @@
         }
 
         /// <summary>
+        /// Returns a random number on a 48-sided dice [1..48].
+        /// </summary>
+        public static int D48()
+        {
+            return UnityEngine.Random.Range(1, 49);
+        }
+
+        /// <summary>
+        /// Returns the sum of rolling a 48-sided dice [1..48]
+        /// <paramref name="n"/> times.
+        /// </summary>
+        /// <param name="n">The number of times to roll the dice.</param>
+        public static int D48(int n)
+        {
+            int roll = 0;
+            while (n-- > 0) roll += D48();
+            return roll;
+        }
+
+        /// <summary>
+        /// Returns a random number on a 100-sided dice [1..100].
+        /// </summary>
+        public static int D100()
+        {
+            return UnityEngine.Random.Range(1, 101);
+        }
+
+        /// <summary>
+        /// Returns the sum of rolling a 100-sided dice [1..100]
+        /// <paramref name="n"/> times.
+        /// </summary>
+        /// <param name="n">The number of times to roll the dice.</param>
+        public static int D100(int n)
+        {
+            int roll = 0;
+            while (n-- > 0) roll += D100();
+            return roll;
+        }
+
+        /// <summary>
         /// Returns a random number on an n-sided dice [1..<paramref name="n"/>].
         /// </summary>
         /// <param name="n">The number of sides on the dice.</param>
