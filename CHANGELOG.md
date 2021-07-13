@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2021/07/12
+
+### Added
+
+- New `Dice` static class for rolling dice + additional dice roll functions
+- New `NumberAbbreviation` data structure + extensions `ToAbbreviatedString`
+- New `DoubleEqualityComparer` to compare doubles based on # of decimals
+- New `Vector2Int` extensions class
+- New `Vector3Int` extensions class
+- New `List` extensions class
+- Extension methods for shuffling arrays and lists `Shuffle()`
+- Extension method `RandomPointInside` for `BoundsInt`
+- Additional `IsBetween` variants for inclusive/exclusive number ranges
+- Dozens of new input processors and support for more types
+
+### Changed
+
+- Dice roll functions moved from `Chance` class to new `Dice` class
+- Overhauled documentation comments
+- Updated package description and README
+
 ## [1.0.4] - 2021/06/30
 
 ### Changed
