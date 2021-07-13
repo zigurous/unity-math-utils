@@ -125,6 +125,28 @@
         }
 
         /// <summary>
+        /// Converts the number to an abbreviated string, e.g. "1k" for 1000.
+        /// </summary>
+        /// <param name="value">The number to abbreviate.</param>
+        /// <returns>A new string of the abbreviated number, or the number as a string if it cannot be abbreviated.</returns>
+        public static string ToAbbreviatedString(this double value)
+        {
+            return NumberAbbreviation.Common.Format(value);
+        }
+
+        /// <summary>
+        /// Converts the number to an abbreviated string using the possible
+        /// provided <paramref name="abbreviations"/>.
+        /// </summary>
+        /// <param name="value">The number to abbreviate.</param>
+        /// <param name="abbreviations">The possible abbreviations.</param>
+        /// <returns>A new string of the abbreviated number, or the number as a string if it cannot be abbreviated.</returns>
+        public static string ToAbbreviatedString(this double value, NumberAbbreviation[] abbreviations)
+        {
+            return abbreviations.Format(value);
+        }
+
+        /// <summary>
         /// Sets the value to <paramref name="newValue"/> if the value is an
         /// imaginary number (infinite or <c>NaN</c>).
         /// </summary>

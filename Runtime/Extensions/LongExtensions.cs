@@ -104,7 +104,7 @@
         /// </summary>
         /// <param name="n">The number to convert.</param>
         /// <returns>The binary representation of the number.</returns>
-        public static string ToBinary(this long n)
+        public static string ToBinaryString(this long n)
         {
             string binary = System.Convert.ToString(n, 2);
             return binary.PadLeft(32 - binary.Length, '0');

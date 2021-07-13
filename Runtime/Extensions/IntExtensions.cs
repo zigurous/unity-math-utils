@@ -111,11 +111,33 @@ namespace Zigurous.Math
         }
 
         /// <summary>
+        /// Converts the number to an abbreviated string, e.g. "1k" for 1000.
+        /// </summary>
+        /// <param name="n">The number to abbreviate.</param>
+        /// <returns>A new string of the abbreviated number, or the number as a string if it cannot be abbreviated.</returns>
+        public static string ToAbbreviatedString(this int n)
+        {
+            return NumberAbbreviation.Common.Format(n);
+        }
+
+        /// <summary>
+        /// Converts the number to an abbreviated string using the possible
+        /// provided <paramref name="abbreviations"/>.
+        /// </summary>
+        /// <param name="n">The number to abbreviate.</param>
+        /// <param name="abbreviations">The abbreviations to use.</param>
+        /// <returns>A new string of the abbreviated number, or the number as a string if it cannot be abbreviated.</returns>
+        public static string ToAbbreviatedString(this int n, NumberAbbreviation[] abbreviations)
+        {
+            return abbreviations.Format(n);
+        }
+
+        /// <summary>
         /// Converts the number to a string of binary digits.
         /// </summary>
         /// <param name="n">The number to convert.</param>
         /// <returns>The binary representation of the number.</returns>
-        public static string ToBinary(this int n)
+        public static string ToBinaryString(this int n)
         {
             string binary = System.Convert.ToString(n, 2);
             return binary.PadLeft(32 - binary.Length, '0');
