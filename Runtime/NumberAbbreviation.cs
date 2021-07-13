@@ -32,10 +32,10 @@ namespace Zigurous.Math
         /// A predefined set of common number abbreviations.
         /// </summary>
         public static readonly NumberAbbreviation[] Common = new NumberAbbreviation[4] {
-            Thousands,
-            Millions,
-            Billions,
             Trillions,
+            Billions,
+            Millions,
+            Thousands,
         };
 
         /// <summary>
