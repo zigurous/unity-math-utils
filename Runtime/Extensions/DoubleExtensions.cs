@@ -6,18 +6,6 @@
     public static class DoubleExtensions
     {
         /// <summary>
-        /// Checks if the value is between <paramref name="min"/> and
-        /// <paramref name="max"/>.
-        /// </summary>
-        /// <param name="value">The value to check.</param>
-        /// <param name="min">The minimum value.</param>
-        /// <param name="max">The maximum value.</param>
-        public static bool IsBetween(this double value, double min, double max)
-        {
-            return value >= min && value <= max;
-        }
-
-        /// <summary>
         /// Checks if the value is <c>NaN</c>.
         /// </summary>
         /// <param name="value">The value to check.</param>

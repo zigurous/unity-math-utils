@@ -14,18 +14,6 @@
         public const float SAFE_FLOAT = 1.4E-32f;
 
         /// <summary>
-        /// Checks if the value is between <paramref name="min"/> and
-        /// <paramref name="max"/>.
-        /// </summary>
-        /// <param name="value">The value to check.</param>
-        /// <param name="min">The minimum value.</param>
-        /// <param name="max">The maximum value.</param>
-        public static bool IsBetween(this float value, float min, float max)
-        {
-            return value >= min && value <= max;
-        }
-
-        /// <summary>
         /// Checks if the value is <c>NaN</c>.
         /// </summary>
         /// <param name="value">The value to check.</param>

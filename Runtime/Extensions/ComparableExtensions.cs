@@ -18,7 +18,7 @@ namespace Zigurous.Math
         /// <param name="includeMin">The minimum value is inclusive if true, exclusive if false.</param>
         /// <param name="includeMax">The maximum value is inclusive if true, exclusive if false.</param>
         /// <typeparam name="T">The type of value to check.</typeparam>
-        public static bool IsBetween<T>(this T value, T min, T max, bool includeMin, bool includeMax) where T: IComparable<T>
+        public static bool IsBetween<T>(this T value, T min, T max, bool includeMin = true, bool includeMax = true) where T: IComparable<T>
         {
             int minCompare = value.CompareTo(min);
             int maxCompare = value.CompareTo(max);
@@ -28,6 +28,58 @@ namespace Zigurous.Math
             if (!includeMax && maxCompare == 0) return false;
 
             return true;
+        }
+
+        /// <summary>
+        /// Checks if the value is in the range
+        /// [<paramref name="min"/>..<paramref name="max"/>].
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        /// <param name="min">The minimum value.</param>
+        /// <param name="max">The maximum value.</param>
+        /// <typeparam name="T">The type of value to check.</typeparam>
+        public static bool IsBetweenInclusive<T>(this T value, T min, T max) where T: IComparable<T>
+        {
+            return value.IsBetween(min, max, true, true);
+        }
+
+        /// <summary>
+        /// Checks if the value is in the range
+        /// [<paramref name="min"/>..<paramref name="max"/>).
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        /// <param name="min">The minimum value.</param>
+        /// <param name="max">The maximum value.</param>
+        /// <typeparam name="T">The type of value to check.</typeparam>
+        public static bool IsBetweenInclusiveExclusive<T>(this T value, T min, T max) where T: IComparable<T>
+        {
+            return value.IsBetween(min, max, true, false);
+        }
+
+        /// <summary>
+        /// Checks if the value is in the range
+        /// (<paramref name="min"/>..<paramref name="max"/>).
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        /// <param name="min">The minimum value.</param>
+        /// <param name="max">The maximum value.</param>
+        /// <typeparam name="T">The type of value to check.</typeparam>
+        public static bool IsBetweenExclusive<T>(this T value, T min, T max) where T: IComparable<T>
+        {
+            return value.IsBetween(min, max, false, false);
+        }
+
+        /// <summary>
+        /// Checks if the value is in the range
+        /// (<paramref name="min"/>..<paramref name="max"/>].
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        /// <param name="min">The minimum value.</param>
+        /// <param name="max">The maximum value.</param>
+        /// <typeparam name="T">The type of value to check.</typeparam>
+        public static bool IsBetweenExclusiveInclusive<T>(this T value, T min, T max) where T: IComparable<T>
+        {
+            return value.IsBetween(min, max, false, true);
         }
 
         /// <summary>
