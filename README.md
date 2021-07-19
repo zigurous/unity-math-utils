@@ -1,6 +1,18 @@
 # Math Utils
 
+[![](https://img.shields.io/badge/github-repo-blue?logo=github)](https://github.com/zigurous/unity-math-utils)
+[![](https://img.shields.io/github/package-json/v/zigurous/unity-math-utils)](https://github.com/zigurous/unity-math-utils/releases)
+[![](https://img.shields.io/badge/docs-link-success)](https://docs.zigurous.com/com.zigurous.math)
+[![](https://img.shields.io/github/license/zigurous/unity-math-utils)](https://github.com/zigurous/unity-math-utils/blob/main/LICENSE.md)
+
 The Math Utils package provides extensions and utilities for working with numbers in Unity projects including processing inputs, generating random numbers, and much more.
+
+## Reference
+
+- [Input Processors](https://docs.zigurous.com/com.zigurous.math/manual/processors.html)
+- [Random Chance](https://docs.zigurous.com/com.zigurous.math/manual/chance.html)
+- [Number Abbreviations](https://docs.zigurous.com/com.zigurous.math/manual/abbreviations.html)
+- [Extension Methods](https://docs.zigurous.com/com.zigurous.math/manual/extensions.html)
 
 ## Installation
 
@@ -29,10 +41,3 @@ Import the package namespace in each script or file you want to use it.
 ```csharp
 using Zigurous.Math;
 ```
-
-## Reference
-
-- [Input Processors](https://docs.zigurous.com/com.zigurous.math/manual/processors.html)
-- [Random Chance](https://docs.zigurous.com/com.zigurous.math/manual/chance.html)
-- [Number Abbreviations](https://docs.zigurous.com/com.zigurous.math/manual/abbreviations.html)
-- [Extension Methods](https://docs.zigurous.com/com.zigurous.math/manual/extensions.html)
