@@ -90,15 +90,15 @@ namespace Zigurous.Math
         /// <param name="max">The upper deadzone threshold.</param>
         public static float AxisDeadzone(float input, float min = 0.125f, float max = 0.925f)
         {
-            if (input >= 0.0f)
+            if (input >= 0f)
             {
-                if (input < min) return 0.0f;
-                if (input > max) return 1.0f;
+                if (input < min) return 0f;
+                if (input > max) return 1f;
             }
             else
             {
-                if (input > -min) return 0.0f;
-                if (input < -max) return -1.0f;
+                if (input > -min) return 0f;
+                if (input < -max) return -1f;
             }
 
             return input;
@@ -303,7 +303,7 @@ namespace Zigurous.Math
         /// <param name="input">The input value to clamp.</param>
         public static float Clamp01(float input)
         {
-            return input < 0.0f ? 0.0f : (input > 1.0f ? 1.0f : input);
+            return input < 0f ? 0f : (input > 1f ? 1f : input);
         }
 
         /// <summary>
@@ -377,7 +377,7 @@ namespace Zigurous.Math
         /// <param name="input">The input value to decay.</param>
         /// <param name="rate">How quickly the input decays.</param>
         /// <param name="target">The optional value to decay to, otherwise zero.</param>
-        public static float Decay(float input, float rate, float target = 0.0f)
+        public static float Decay(float input, float rate, float target = 0f)
         {
             if (input > target) {
                 return System.Math.Max(input - (rate * Time.deltaTime), target);
@@ -485,7 +485,7 @@ namespace Zigurous.Math
         /// <param name="input">The input value to invert.</param>
         public static float Invert(float input)
         {
-            return input * -1.0f;
+            return input * -1f;
         }
 
         /// <summary>
@@ -512,7 +512,7 @@ namespace Zigurous.Math
         /// <param name="input">The input value to invert.</param>
         public static Vector2 Invert(Vector2 input)
         {
-            return input * -1.0f;
+            return input * -1f;
         }
 
         /// <summary>
@@ -524,8 +524,8 @@ namespace Zigurous.Math
         public static Vector2 Invert(Vector2 input, bool invertX, bool invertY)
         {
             Vector2 inverted = input;
-            if (invertX) inverted.x *= -1.0f;
-            if (invertY) inverted.y *= -1.0f;
+            if (invertX) inverted.x *= -1f;
+            if (invertY) inverted.y *= -1f;
             return inverted;
         }
 
@@ -558,7 +558,7 @@ namespace Zigurous.Math
         /// <param name="input">The input value to invert.</param>
         public static Vector3 Invert(Vector3 input)
         {
-            return input * -1.0f;
+            return input * -1f;
         }
 
         /// <summary>
@@ -571,9 +571,9 @@ namespace Zigurous.Math
         public static Vector3 Invert(Vector3 input, bool invertX, bool invertY, bool invertZ)
         {
             Vector3 inverted = input;
-            if (invertX) inverted.x *= -1.0f;
-            if (invertY) inverted.y *= -1.0f;
-            if (invertZ) inverted.z *= -1.0f;
+            if (invertX) inverted.x *= -1f;
+            if (invertY) inverted.y *= -1f;
+            if (invertZ) inverted.z *= -1f;
             return inverted;
         }
 
@@ -608,7 +608,7 @@ namespace Zigurous.Math
         /// <param name="input">The input value to invert.</param>
         public static Vector4 Invert(Vector4 input)
         {
-            return input * -1.0f;
+            return input * -1f;
         }
 
         /// <summary>
@@ -622,10 +622,10 @@ namespace Zigurous.Math
         public static Vector4 Invert(Vector4 input, bool invertX, bool invertY, bool invertZ, bool invertW)
         {
             Vector4 inverted = input;
-            if (invertX) inverted.x *= -1.0f;
-            if (invertY) inverted.y *= -1.0f;
-            if (invertZ) inverted.z *= -1.0f;
-            if (invertW) inverted.w *= -1.0f;
+            if (invertX) inverted.x *= -1f;
+            if (invertY) inverted.y *= -1f;
+            if (invertZ) inverted.z *= -1f;
+            if (invertW) inverted.w *= -1f;
             return inverted;
         }
 
@@ -639,12 +639,12 @@ namespace Zigurous.Math
         /// <param name="input">The input value to normalize.</param>
         /// <param name="min">The minimum value of the range.</param>
         /// <param name="max">The maximum value of the range.</param>
-        public static float Normalize(float input, float min, float max, float zero = 0.0f)
+        public static float Normalize(float input, float min, float max, float zero = 0f)
         {
             if (min >= zero) {
                 return (input - min) / (max - min);
             } else {
-                return 2.0f * ((input - min) / (max - min)) - 1.0f;
+                return 2f * ((input - min) / (max - min)) - 1f;
             }
         }
 
@@ -1090,10 +1090,10 @@ namespace Zigurous.Math
         /// <param name="input">The input value to wrap.</param>
         public static float Wrap01(float input)
         {
-            if (input < 0.0f) {
-                return 1.0f - (-input % 1.0f);
-            } else if (input > 1.0f) {
-                return input % 1.0f;
+            if (input < 0f) {
+                return 1f - (-input % 1f);
+            } else if (input > 1f) {
+                return input % 1f;
             } else {
                 return input;
             }

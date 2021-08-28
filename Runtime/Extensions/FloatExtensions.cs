@@ -75,7 +75,7 @@
         /// <param name="value">The value to check.</param>
         public static bool IsDividable(this float value)
         {
-            return value != 0.0f && !float.IsInfinity(value) && !float.IsNaN(value);
+            return value != 0f && !float.IsInfinity(value) && !float.IsNaN(value);
         }
 
         /// <summary>
@@ -84,7 +84,7 @@
         /// <param name="value">The value to check.</param>
         public static bool IsPositive(this float value)
         {
-            return value > 0.0f;
+            return value > 0f;
         }
 
         /// <summary>
@@ -93,7 +93,7 @@
         /// <param name="value">The value to check.</param>
         public static bool IsNegative(this float value)
         {
-            return value < 0.0f;
+            return value < 0f;
         }
 
         /// <summary>

@@ -56,11 +56,11 @@
         }
 
         /// <summary>
-        /// Returns <c>1.0f</c> or <c>-1.0f</c>, with 50-50 odds.
+        /// Returns <c>1f</c> or <c>-1f</c>, with 50-50 odds.
         /// </summary>
         public static float PositiveOrNegative()
         {
-            return UnityEngine.Random.value < 0.5f ? 1.0f : -1.0f;
+            return UnityEngine.Random.value < 0.5f ? 1f : -1f;
         }
 
         /// <summary>

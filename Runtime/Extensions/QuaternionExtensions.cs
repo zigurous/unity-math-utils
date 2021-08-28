@@ -21,7 +21,7 @@ namespace Zigurous.Math
         public static Quaternion SmoothDamp(this Quaternion current, Quaternion target, ref Quaternion currentVelocity, float smoothTime, float maxSpeed = Mathf.Infinity)
         {
             float dot = Quaternion.Dot(current, target);
-            float direction = dot > 0.0f ? 1.0f : -1.0f;
+            float direction = dot > 0f ? 1f : -1f;
             target.x *= direction;
             target.y *= direction;
             target.z *= direction;

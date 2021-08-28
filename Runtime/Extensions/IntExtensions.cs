@@ -107,7 +107,7 @@ namespace Zigurous.Math
         /// <param name="n">The number to check.</param>
         public static int NumDigits(this int n)
         {
-            return Mathf.FloorToInt(Mathf.Log10((float)n) + 1.0f);
+            return Mathf.FloorToInt(Mathf.Log10((float)n) + 1f);
         }
 
         /// <summary>
