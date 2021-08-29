@@ -1,7 +1,0 @@
-apiRules:
-- exclude:
-    uidRegex: ^System
-- exclude:
-    uidRegex: ^UnityEngine
-- exclude:
-    uidRegex: ^UnityEditor
