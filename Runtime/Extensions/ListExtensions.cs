@@ -12,8 +12,8 @@ namespace Zigurous.Math
         /// Shuffles the list in place.
         /// </summary>
         /// <remarks>The shuffle is done using the Fisher-Yates algorithm.</remarks>
-        /// <param name="list">The list to shuffle.</param>
         /// <typeparam name="T">The type of the list.</typeparam>
+        /// <param name="list">The list to shuffle.</param>
         public static void Shuffle<T>(this List<T> list)
         {
             int n = list.Count;
@@ -31,9 +31,9 @@ namespace Zigurous.Math
         /// Shuffles the list in place using the given random number generator.
         /// </summary>
         /// <remarks>The shuffle is done using the Fisher-Yates algorithm.</remarks>
+        /// <typeparam name="T">The type of the list.</typeparam>
         /// <param name="list">The list to shuffle.</param>
         /// <param name="rng">The random number generator to use.</param>
-        /// <typeparam name="T">The type of the list.</typeparam>
         public static void Shuffle<T>(this List<T> list, Random rng)
         {
             int n = list.Count;

@@ -212,8 +212,8 @@
         /// <summary>
         /// Returns a random value on a dice with custom values.
         /// </summary>
-        /// <param name="values">The values of the dice.</param>
         /// <typeparam name="T">The type of value to choose.</typeparam>
+        /// <param name="values">The values of the dice.</param>
         public static T Roll<T>(T[] values)
         {
             return values[UnityEngine.Random.Range(0, values.Length)];
@@ -224,9 +224,9 @@
         /// with probability proportional to the given set of
         /// <paramref name="probabilities"/>.
         /// </summary>
+        /// <typeparam name="T">The type of value to choose.</typeparam>
         /// <param name="values">The values to choose from.</param>
         /// <param name="probabilities">The probabilities of each value.</param>
-        /// <typeparam name="T">The type of value to choose.</typeparam>
         public static T Roll<T>(T[] values, int[] probabilities)
         {
             // OPTIMIZE: Prevent allocation of a new array each time.

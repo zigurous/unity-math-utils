@@ -12,12 +12,12 @@ namespace Zigurous.Math
         /// Checks if the value is between <paramref name="min"/> and
         /// <paramref name="max"/>.
         /// </summary>
+        /// <typeparam name="T">The type of value to check.</typeparam>
         /// <param name="value">The value to check.</param>
         /// <param name="min">The minimum value.</param>
         /// <param name="max">The maximum value.</param>
         /// <param name="includeMin">The minimum value is inclusive if true, exclusive if false.</param>
         /// <param name="includeMax">The maximum value is inclusive if true, exclusive if false.</param>
-        /// <typeparam name="T">The type of value to check.</typeparam>
         public static bool IsBetween<T>(this T value, T min, T max, bool includeMin = true, bool includeMax = true) where T: IComparable<T>
         {
             int minCompare = value.CompareTo(min);
@@ -34,10 +34,10 @@ namespace Zigurous.Math
         /// Checks if the value is in the range
         /// [<paramref name="min"/>..<paramref name="max"/>].
         /// </summary>
+        /// <typeparam name="T">The type of value to check.</typeparam>
         /// <param name="value">The value to check.</param>
         /// <param name="min">The minimum value.</param>
         /// <param name="max">The maximum value.</param>
-        /// <typeparam name="T">The type of value to check.</typeparam>
         public static bool IsBetweenInclusive<T>(this T value, T min, T max) where T: IComparable<T>
         {
             return value.IsBetween(min, max, true, true);
@@ -47,10 +47,10 @@ namespace Zigurous.Math
         /// Checks if the value is in the range
         /// [<paramref name="min"/>..<paramref name="max"/>).
         /// </summary>
+        /// <typeparam name="T">The type of value to check.</typeparam>
         /// <param name="value">The value to check.</param>
         /// <param name="min">The minimum value.</param>
         /// <param name="max">The maximum value.</param>
-        /// <typeparam name="T">The type of value to check.</typeparam>
         public static bool IsBetweenInclusiveExclusive<T>(this T value, T min, T max) where T: IComparable<T>
         {
             return value.IsBetween(min, max, true, false);
@@ -60,10 +60,10 @@ namespace Zigurous.Math
         /// Checks if the value is in the range
         /// (<paramref name="min"/>..<paramref name="max"/>).
         /// </summary>
+        /// <typeparam name="T">The type of value to check.</typeparam>
         /// <param name="value">The value to check.</param>
         /// <param name="min">The minimum value.</param>
         /// <param name="max">The maximum value.</param>
-        /// <typeparam name="T">The type of value to check.</typeparam>
         public static bool IsBetweenExclusive<T>(this T value, T min, T max) where T: IComparable<T>
         {
             return value.IsBetween(min, max, false, false);
@@ -73,10 +73,10 @@ namespace Zigurous.Math
         /// Checks if the value is in the range
         /// (<paramref name="min"/>..<paramref name="max"/>].
         /// </summary>
+        /// <typeparam name="T">The type of value to check.</typeparam>
         /// <param name="value">The value to check.</param>
         /// <param name="min">The minimum value.</param>
         /// <param name="max">The maximum value.</param>
-        /// <typeparam name="T">The type of value to check.</typeparam>
         public static bool IsBetweenExclusiveInclusive<T>(this T value, T min, T max) where T: IComparable<T>
         {
             return value.IsBetween(min, max, false, true);
@@ -85,8 +85,8 @@ namespace Zigurous.Math
         /// <summary>
         /// Returns the maximum value in the array.
         /// </summary>
-        /// <param name="values">The values to check.</param>
         /// <typeparam name="T">The type of value to check.</typeparam>
+        /// <param name="values">The values to check.</param>
         public static T Max<T>(this T[] values) where T: IComparable<T>
         {
             if (values == null || values.Length == 0) {
@@ -110,8 +110,8 @@ namespace Zigurous.Math
         /// <summary>
         /// Returns the maximum value in the list.
         /// </summary>
-        /// <param name="values">The values to check.</param>
         /// <typeparam name="T">The type of value to check.</typeparam>
+        /// <param name="values">The values to check.</param>
         public static T Max<T>(this List<T> values) where T: IComparable<T>
         {
             if (values == null || values.Count == 0) {
@@ -135,8 +135,8 @@ namespace Zigurous.Math
         /// <summary>
         /// Returns the minimum value in the array.
         /// </summary>
-        /// <param name="values">The values to check.</param>
         /// <typeparam name="T">The type of value to check.</typeparam>
+        /// <param name="values">The values to check.</param>
         public static T Min<T>(this T[] values) where T: IComparable<T>
         {
             if (values == null || values.Length == 0) {
@@ -160,8 +160,8 @@ namespace Zigurous.Math
         /// <summary>
         /// Returns the minimum value in the list.
         /// </summary>
-        /// <param name="values">The values to check.</param>
         /// <typeparam name="T">The type of value to check.</typeparam>
+        /// <param name="values">The values to check.</param>
         public static T Min<T>(this List<T> values) where T: IComparable<T>
         {
             if (values == null || values.Count == 0) {
