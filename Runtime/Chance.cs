@@ -34,6 +34,7 @@
         /// <summary>
         /// Returns a random playing card suit.
         /// </summary>
+        /// <returns>A random playing card suit.</returns>
         public static Suit RandomSuit()
         {
             return (Suit)UnityEngine.Random.Range(0, 4);
@@ -42,6 +43,7 @@
         /// <summary>
         /// Returns a random card from a standard 52-card deck.
         /// </summary>
+        /// <returns>A random card from a standard 52-card deck.</returns>
         public static Card RandomCard()
         {
             return (Card)UnityEngine.Random.Range(0, 52);
@@ -50,6 +52,7 @@
         /// <summary>
         /// Returns <c>true</c> or <c>false</c>, with 50-50 odds.
         /// </summary>
+        /// <returns><c>true</c> or <c>false</c>, with 50-50 odds.</returns>
         public static bool RandomBool()
         {
             return UnityEngine.Random.value < 0.5f;
@@ -58,6 +61,7 @@
         /// <summary>
         /// Returns <c>1f</c> or <c>-1f</c>, with 50-50 odds.
         /// </summary>
+        /// <returns><c>1f</c> or <c>-1f</c>, with 50-50 odds.</returns>
         public static float PositiveOrNegative()
         {
             return UnityEngine.Random.value < 0.5f ? 1f : -1f;
@@ -67,6 +71,7 @@
         /// Returns <c>-value</c> or <c>+value</c>, with 50-50 odds.
         /// </summary>
         /// <param name="value">The value to be returned.</param>
+        /// <returns><c>-value</c> or <c>+value</c>, with 50-50 odds.</returns>
         public static float PositiveOrNegative(float value)
         {
             return UnityEngine.Random.value < 0.5f ? value : -value;
@@ -75,6 +80,7 @@
         /// <summary>
         /// Returns <c>Heads</c> or <c>Tails</c>, with 50-50 odds.
         /// </summary>
+        /// <returns><c>Heads</c> or <c>Tails</c>, with 50-50 odds.</returns>
         public static Coin CoinFlip()
         {
             return UnityEngine.Random.value < 0.5f ? Coin.Heads : Coin.Tails;

@@ -28,6 +28,7 @@ namespace Zigurous.Math
         /// Returns a hash code for the double value.
         /// </summary>
         /// <param name="value">The value to get the hash code for.</param>
+        /// <returns>The hash code for the value.</returns>
         public int GetHashCode(double value)
         {
             return System.Math.Round(value, this.digits).GetHashCode();

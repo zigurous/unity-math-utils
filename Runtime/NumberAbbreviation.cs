@@ -9,33 +9,33 @@ namespace Zigurous.Math
     public struct NumberAbbreviation
     {
         /// <summary>
-        /// An abbreviation for numbers in the thousands.
+        /// An abbreviation for numbers in the thousands (Read only).
         /// </summary>
-        public static NumberAbbreviation Thousands => new NumberAbbreviation(1_000, "0K");
+        public static NumberAbbreviation thousands => new NumberAbbreviation(1_000, "0K");
 
         /// <summary>
-        /// An abbreviation for numbers in the millions.
+        /// An abbreviation for numbers in the millions (Read only).
         /// </summary>
-        public static NumberAbbreviation Millions => new NumberAbbreviation(1_000_000, "0M");
+        public static NumberAbbreviation millions => new NumberAbbreviation(1_000_000, "0M");
 
         /// <summary>
-        /// An abbreviation for numbers in the billions.
+        /// An abbreviation for numbers in the billions (Read only).
         /// </summary>
-        public static NumberAbbreviation Billions => new NumberAbbreviation(1_000_000_000, "0B");
+        public static NumberAbbreviation billions => new NumberAbbreviation(1_000_000_000, "0B");
 
         /// <summary>
-        /// An abbreviation for numbers in the trillions.
+        /// An abbreviation for numbers in the trillions (Read only).
         /// </summary>
-        public static NumberAbbreviation Trillions => new NumberAbbreviation(1_000_000_000_000, "0T");
+        public static NumberAbbreviation trillions => new NumberAbbreviation(1_000_000_000_000, "0T");
 
         /// <summary>
-        /// A predefined set of common number abbreviations.
+        /// A predefined set of common number abbreviations (Read only).
         /// </summary>
-        public static readonly NumberAbbreviation[] Common = new NumberAbbreviation[4] {
-            Trillions,
-            Billions,
-            Millions,
-            Thousands,
+        public static readonly NumberAbbreviation[] common = new NumberAbbreviation[4] {
+            trillions,
+            billions,
+            millions,
+            thousands,
         };
 
         /// <summary>
@@ -51,8 +51,7 @@ namespace Zigurous.Math
         public string format;
 
         /// <summary>
-        /// Creates a new number abbreviation with the given
-        /// <paramref name="factor"/> and <paramref name="format"/>.
+        /// Creates a new number abbreviation with a given factor and format.
         /// </summary>
         /// <param name="factor">The number factor after which the abbreviation is applied.</param>
         /// <param name="format">The string format of the abbreviated number.</param>
@@ -63,30 +62,30 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Abbreviates the given <paramref name="number"/> to a string.
+        /// Abbreviates a number to a string.
         /// </summary>
         /// <param name="number">The number to abbreviate.</param>
-        /// <returns>A new string of the abbreviated number.</returns>
+        /// <returns>The number abbreviated as a string.</returns>
         public string Format(int number)
         {
             return (number / this.factor).ToString(this.format);
         }
 
         /// <summary>
-        /// Abbreviates the given <paramref name="number"/> to a string.
+        /// Abbreviates a number to a string.
         /// </summary>
         /// <param name="number">The number to abbreviate.</param>
-        /// <returns>A new string of the abbreviated number.</returns>
+        /// <returns>The number abbreviated as a string.</returns>
         public string Format(float number)
         {
             return (number / this.factor).ToString(this.format);
         }
 
         /// <summary>
-        /// Abbreviates the given <paramref name="number"/> to a string.
+        /// Abbreviates a number to a string.
         /// </summary>
         /// <param name="number">The number to abbreviate.</param>
-        /// <returns>A new string of the abbreviated number.</returns>
+        /// <returns>The number abbreviated as a string.</returns>
         public string Format(double number)
         {
             return (number / this.factor).ToString(this.format);
@@ -100,11 +99,11 @@ namespace Zigurous.Math
     public static class NumberAbbreviationExtensions
     {
         /// <summary>
-        /// Abbreviates the given <paramref name="number"/> to a string.
+        /// Abbreviates a number to a string with the given set of abbreviations.
         /// </summary>
         /// <param name="abbreviations">The possible abbreviations to apply.</param>
         /// <param name="number">The number to abbreviate.</param>
-        /// <returns>A new string of the abbreviated number, or the number as a string if it cannot be abbreviated.</returns>
+        /// <returns>The number abbreviated as a string, or the number as a string if no abbreviations apply.</returns>
         public static string Format(this NumberAbbreviation[] abbreviations, int number)
         {
             int abs = System.Math.Abs(number);
@@ -122,11 +121,11 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Abbreviates the given <paramref name="number"/> to a string.
+        /// Abbreviates a number to a string with the given set of abbreviations.
         /// </summary>
         /// <param name="abbreviations">The possible abbreviations to apply.</param>
         /// <param name="number">The number to abbreviate.</param>
-        /// <returns>A new string of the abbreviated number, or the number as a string if it cannot be abbreviated.</returns>
+        /// <returns>The number abbreviated as a string, or the number as a string if no abbreviations apply.</returns>
         public static string Format(this NumberAbbreviation[] abbreviations, float number)
         {
             float abs = System.Math.Abs(number);
@@ -144,11 +143,11 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Abbreviates the given <paramref name="number"/> to a string.
+        /// Abbreviates a number to a string with the given set of abbreviations.
         /// </summary>
         /// <param name="abbreviations">The possible abbreviations to apply.</param>
         /// <param name="number">The number to abbreviate.</param>
-        /// <returns>A new string of the abbreviated number, or the number as a string if it cannot be abbreviated.</returns>
+        /// <returns>The number abbreviated as a string, or the number as a string if no abbreviations apply.</returns>
         public static string Format(this NumberAbbreviation[] abbreviations, double number)
         {
             double abs = System.Math.Abs(number);

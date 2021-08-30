@@ -11,6 +11,7 @@ namespace Zigurous.Math
         /// Returns the factors of the given number.
         /// </summary>
         /// <param name="n">The number to factor.</param>
+        /// <returns>The factors of the given number.</returns>
         public static IEnumerable<uint> Factors(this uint n)
         {
             for (uint x = 1; x * x <= n; x++)
@@ -32,6 +33,7 @@ namespace Zigurous.Math
         /// <param name="n">The number to get bits from.</param>
         /// <param name="amount">The amount of bits to return.</param>
         /// <param name="offset">The amount of bits to discard.</param>
+        /// <returns>The subset of bits.</returns>
         public static uint GetBits(this uint n, int amount, int offset)
         {
             if (offset >= int.MaxValue) {
@@ -49,22 +51,24 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Checks if the <paramref name="flag"/> is set in the bitmask.
+        /// Checks if a given flag is set in the bitmask.
         /// <c>(mask &amp; flag) == flag</c>
         /// </summary>
         /// <param name="mask">The mask to check.</param>
         /// <param name="flag">The flag to check for.</param>
+        /// <returns>True if the flag is set in the mask.</returns>
         public static bool HasFlag(this uint mask, uint flag)
         {
             return (mask & flag) == flag;
         }
 
         /// <summary>
-        /// Checks if any of the <paramref name="flags"/> are set in the bitmask.
+        /// Checks if any of the given flags are set in the bitmask.
         /// <c>(mask &amp; flags) != 0</c>
         /// </summary>
         /// <param name="mask">The mask to check.</param>
         /// <param name="flags">The flags to check for.</param>
+        /// <returns>True if any of the flags are set in the mask.</returns>
         public static bool HasAnyFlag(this uint mask, uint flags)
         {
             return (mask & flags) != 0;
@@ -75,6 +79,7 @@ namespace Zigurous.Math
         /// <c>n % 2 == 0</c>
         /// </summary>
         /// <param name="n">The number to check.</param>
+        /// <returns>True if the number is even.</returns>
         public static bool IsEven(this uint n)
         {
             return n % 2 == 0;
@@ -85,6 +90,7 @@ namespace Zigurous.Math
         /// <c>n % 2 != 0</c>
         /// </summary>
         /// <param name="n">The number to check.</param>
+        /// <returns>True if the number is odd.</returns>
         public static bool IsOdd(this uint n)
         {
             return n % 2 != 0;
@@ -95,6 +101,7 @@ namespace Zigurous.Math
         /// <c>n == 0</c>
         /// </summary>
         /// <param name="n">The number to check.</param>
+        /// <returns>True if the number is zero.</returns>
         public static bool IsZero(this uint n)
         {
             return n == 0;
@@ -105,6 +112,7 @@ namespace Zigurous.Math
         /// <c>n &#62; 0</c>
         /// </summary>
         /// <param name="n">The number to check.</param>
+        /// <returns>True if the number is positive.</returns>
         public static bool IsPositive(this uint n)
         {
             return n > 0;

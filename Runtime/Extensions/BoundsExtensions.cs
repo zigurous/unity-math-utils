@@ -11,6 +11,7 @@ namespace Zigurous.Math
         /// Returns a random point inside the bounds.
         /// </summary>
         /// <param name="bounds">The bounds to get a random point from.</param>
+        /// <returns>A random point inside the bounds.</returns>
         public static Vector3 RandomPointInside(this Bounds bounds)
         {
             return new Vector3(
@@ -23,6 +24,7 @@ namespace Zigurous.Math
         /// Returns a random point inside the bounds.
         /// </summary>
         /// <param name="bounds">The bounds to get a random point from.</param>
+        /// <returns>A random point inside the bounds.</returns>
         public static Vector3Int RandomPointInside(this BoundsInt bounds)
         {
             return new Vector3Int(

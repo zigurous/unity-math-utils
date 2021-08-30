@@ -11,6 +11,7 @@ namespace Zigurous.Math
         /// Returns the absolute value of the vector.
         /// </summary>
         /// <param name="vector">The vector to return the absolute of.</param>
+        /// <returns>A new vector of the absolute value.</returns>
         public static Vector2Int Abs(this Vector2Int vector)
         {
             vector.x = System.Math.Abs(vector.x);
@@ -40,8 +41,7 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Clamps the vector to the range
-        /// [<paramref name="min"/>..<paramref name="max"/>].
+        /// Clamps the vector to the range [min..max].
         /// </summary>
         /// <param name="vector">The vector to clamp.</param>
         /// <param name="min">The minimum value.</param>
@@ -53,8 +53,7 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Clamps the vector to the range
-        /// [<paramref name="min"/>..<paramref name="max"/>].
+        /// Clamps the vector to the range [min..max].
         /// </summary>
         /// <param name="vector">The vector to clamp.</param>
         /// <param name="min">The minimum value.</param>
@@ -68,8 +67,7 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Sets all components of the vector to the given
-        /// <paramref name="value"/>.
+        /// Sets all components of the vector to the given value.
         /// </summary>
         /// <param name="vector">The vector to set.</param>
         /// <param name="value">The uniform component value.</param>
@@ -80,8 +78,7 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Sets all components of the vector to the given
-        /// <paramref name="value"/>.
+        /// Sets all components of the vector to the given value.
         /// </summary>
         /// <param name="vector">The vector to set.</param>
         /// <param name="value">The uniform component value.</param>
@@ -94,8 +91,7 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Wraps the vector to the <paramref name="min"/> and
-        /// <paramref name="max"/> values.
+        /// Wraps the vector to the range [min..max].
         /// </summary>
         /// <param name="vector">The vector to wrap.</param>
         /// <param name="min">The minimum value.</param>
@@ -107,8 +103,7 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Wraps the vector to the <paramref name="min"/> and
-        /// <paramref name="max"/> values.
+        /// Wraps the vector to the range [min..max].
         /// </summary>
         /// <param name="vector">The vector to wrap.</param>
         /// <param name="min">The minimum value.</param>

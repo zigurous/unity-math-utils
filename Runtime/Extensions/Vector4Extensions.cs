@@ -11,6 +11,7 @@ namespace Zigurous.Math
         /// Returns the absolute value of the vector.
         /// </summary>
         /// <param name="vector">The vector to return the absolute of.</param>
+        /// <returns>A new vector of the absolute value.</returns>
         public static Vector4 Abs(this Vector4 vector)
         {
             vector.x = System.Math.Abs(vector.x);
@@ -68,8 +69,7 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Clamps the vector to the range
-        /// [<paramref name="min"/>..<paramref name="max"/>].
+        /// Clamps the vector to the range [min..max].
         /// </summary>
         /// <param name="vector">The vector to clamp.</param>
         /// <param name="min">The minimum value.</param>
@@ -83,8 +83,7 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Clamps the vector to the range
-        /// [<paramref name="min"/>..<paramref name="max"/>].
+        /// Clamps the vector to the range [min..max].
         /// </summary>
         /// <param name="vector">The vector to clamp.</param>
         /// <param name="min">The minimum value.</param>
@@ -127,11 +126,11 @@ namespace Zigurous.Math
 
         /// <summary>
         /// Checks for equality with another vector given a margin of error
-        /// specified by the <paramref name="epsilon"/>.
+        /// specified by an epsilon.
         /// </summary>
         /// <param name="lhs">The left-hand side of the equality check.</param>
         /// <param name="rhs">The right-hand side of the equality check.</param>
-        /// <returns>True if <paramref name="lhs"/> is considered equal to <paramref name="rhs"/>.</returns>
+        /// <returns>True if the values are equal.</returns>
         public static bool IsEqualTo(this Vector4 lhs, Vector4 rhs, float epsilon = float.Epsilon)
         {
             return lhs.x.IsEqualTo(rhs.x) &&
@@ -142,7 +141,7 @@ namespace Zigurous.Math
 
         /// <summary>
         /// Checks if the vector is zero given a margin of error specified by
-        /// the <paramref name="epsilon"/>.
+        /// an epsilon.
         /// </summary>
         /// <param name="vector">The vector to check.</param>
         /// <param name="epsilon">The margin of error.</param>
@@ -182,8 +181,7 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Sets all components of the vector to the given
-        /// <paramref name="value"/>.
+        /// Sets all components of the vector to the given value.
         /// </summary>
         /// <param name="vector">The vector to set.</param>
         /// <param name="value">The uniform component value.</param>
@@ -196,8 +194,7 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Sets all components of the vector to the given
-        /// <paramref name="value"/>.
+        /// Sets all components of the vector to the given value.
         /// </summary>
         /// <param name="vector">The vector to set.</param>
         /// <param name="value">The uniform component value.</param>
@@ -212,8 +209,7 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Wraps the vector to the <paramref name="min"/> and
-        /// <paramref name="max"/> values.
+        /// Wraps the vector to the range [min..max].
         /// </summary>
         /// <param name="vector">The vector to wrap.</param>
         /// <param name="min">The minimum value.</param>
@@ -227,8 +223,7 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Wraps the vector to the <paramref name="min"/> and
-        /// <paramref name="max"/> values.
+        /// Wraps the vector to the range [min..max].
         /// </summary>
         /// <param name="vector">The vector to wrap.</param>
         /// <param name="min">The minimum value.</param>

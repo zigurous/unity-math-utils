@@ -11,6 +11,7 @@ namespace Zigurous.Math
         /// Returns a random point inside the collider's bounds.
         /// </summary>
         /// <param name="collider">The collider to get a random point from.</param>
+        /// <returns>A random point inside the collider's bounds.</returns>
         public static Vector3 RandomPointInside(this Collider collider)
         {
             Vector3 randomPoint = collider.bounds.RandomPointInside();
@@ -27,6 +28,7 @@ namespace Zigurous.Math
         /// Returns a random point inside the collider's bounds.
         /// </summary>
         /// <param name="collider">The collider to get a random point from.</param>
+        /// <returns>A random point inside the collider's bounds.</returns>
         public static Vector2 RandomPointInside(this Collider2D collider)
         {
             Vector2 randomPoint = collider.bounds.RandomPointInside();

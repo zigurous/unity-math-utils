@@ -11,6 +11,7 @@ namespace Zigurous.Math
         /// Returns the absolute value of the input.
         /// </summary>
         /// <param name="input">The input value to absolute.</param>
+        /// <returns>The absolute value of the input.</returns>
         public static float Abs(float input)
         {
             return System.Math.Abs(input);
@@ -20,6 +21,7 @@ namespace Zigurous.Math
         /// Returns the absolute value of the input.
         /// </summary>
         /// <param name="input">The input value to absolute.</param>
+        /// <returns>The absolute value of the input.</returns>
         public static double Abs(double input)
         {
             return System.Math.Abs(input);
@@ -29,6 +31,7 @@ namespace Zigurous.Math
         /// Returns the absolute value of the input.
         /// </summary>
         /// <param name="input">The input value to absolute.</param>
+        /// <returns>The absolute value of the input.</returns>
         public static int Abs(int input)
         {
             return System.Math.Abs(input);
@@ -38,6 +41,7 @@ namespace Zigurous.Math
         /// Returns the absolute value of the input.
         /// </summary>
         /// <param name="input">The input value to absolute.</param>
+        /// <returns>The absolute value of the input.</returns>
         public static Vector2 Abs(Vector2 input)
         {
             return new Vector2(Abs(input.x), Abs(input.y));
@@ -47,6 +51,7 @@ namespace Zigurous.Math
         /// Returns the absolute value of the input.
         /// </summary>
         /// <param name="input">The input value to absolute.</param>
+        /// <returns>The absolute value of the input.</returns>
         public static Vector2Int Abs(Vector2Int input)
         {
             return new Vector2Int(Abs(input.x), Abs(input.y));
@@ -56,6 +61,7 @@ namespace Zigurous.Math
         /// Returns the absolute value of the input.
         /// </summary>
         /// <param name="input">The input value to absolute.</param>
+        /// <returns>The absolute value of the input.</returns>
         public static Vector3 Abs(Vector3 input)
         {
             return new Vector3(Abs(input.x), Abs(input.y), Abs(input.z));
@@ -65,6 +71,7 @@ namespace Zigurous.Math
         /// Returns the absolute value of the input.
         /// </summary>
         /// <param name="input">The input value to absolute.</param>
+        /// <returns>The absolute value of the input.</returns>
         public static Vector3Int Abs(Vector3Int input)
         {
             return new Vector3Int(Abs(input.x), Abs(input.y), Abs(input.z));
@@ -74,6 +81,7 @@ namespace Zigurous.Math
         /// Returns the absolute value of the input.
         /// </summary>
         /// <param name="input">The input value to absolute.</param>
+        /// <returns>The absolute value of the input.</returns>
         public static Vector4 Abs(Vector4 input)
         {
             return new Vector4(Abs(input.x), Abs(input.y), Abs(input.z), Abs(input.w));
@@ -81,13 +89,13 @@ namespace Zigurous.Math
 
         /// <summary>
         /// An axis deadzone scales the input such that any value with an
-        /// absolute value smaller than <paramref name="min"/> is 0, and any
-        /// value with an absolute value larger than <paramref name="max"/> is
-        /// 1 or -1.
+        /// absolute value smaller than the min is 0, and any value with an
+        /// absolute value larger than the max is 1 or -1.
         /// </summary>
         /// <param name="input">The input value to scale.</param>
         /// <param name="min">The lower deadzone threshold.</param>
         /// <param name="max">The upper deadzone threshold.</param>
+        /// <returns>The scaled input value.</returns>
         public static float AxisDeadzone(float input, float min = 0.125f, float max = 0.925f)
         {
             if (input >= 0f)
@@ -106,13 +114,13 @@ namespace Zigurous.Math
 
         /// <summary>
         /// An axis deadzone scales the input such that any value with an
-        /// absolute value smaller than <paramref name="min"/> is 0, and any
-        /// value with an absolute value larger than <paramref name="max"/> is
-        /// 1 or -1.
+        /// absolute value smaller than the min is 0, and any value with an
+        /// absolute value larger than the max is 1 or -1.
         /// </summary>
         /// <param name="input">The input value to scale.</param>
         /// <param name="min">The lower deadzone threshold.</param>
         /// <param name="max">The upper deadzone threshold.</param>
+        /// <returns>The scaled input value.</returns>
         public static double AxisDeadzone(double input, double min = 0.125, double max = 0.925)
         {
             if (input >= 0.0)
@@ -133,6 +141,7 @@ namespace Zigurous.Math
         /// Rounds the input up to the nearest whole number.
         /// </summary>
         /// <param name="input">The input value to round.</param>
+        /// <returns>The rounded input value.</returns>
         public static float Ceil(float input)
         {
             return Mathf.Ceil(input);
@@ -142,6 +151,7 @@ namespace Zigurous.Math
         /// Rounds the input up to the nearest whole number.
         /// </summary>
         /// <param name="input">The input value to round.</param>
+        /// <returns>The rounded input value.</returns>
         public static double Ceil(double input)
         {
             return System.Math.Ceiling(input);
@@ -151,6 +161,7 @@ namespace Zigurous.Math
         /// Rounds the input up to the nearest whole number.
         /// </summary>
         /// <param name="input">The input value to round.</param>
+        /// <returns>The rounded input value.</returns>
         public static int Ceil(int input)
         {
             return Mathf.CeilToInt(input);
@@ -160,6 +171,7 @@ namespace Zigurous.Math
         /// Rounds the input up to the nearest whole number.
         /// </summary>
         /// <param name="input">The input value to round.</param>
+        /// <returns>The rounded input value.</returns>
         public static Vector2 Ceil(Vector2 input)
         {
             return new Vector2(Ceil(input.x), Ceil(input.y));
@@ -169,6 +181,7 @@ namespace Zigurous.Math
         /// Rounds the input up to the nearest whole number.
         /// </summary>
         /// <param name="input">The input value to round.</param>
+        /// <returns>The rounded input value.</returns>
         public static Vector2Int Ceil(Vector2Int input)
         {
             return new Vector2Int(Ceil(input.x), Ceil(input.y));
@@ -178,6 +191,7 @@ namespace Zigurous.Math
         /// Rounds the input up to the nearest whole number.
         /// </summary>
         /// <param name="input">The input value to round.</param>
+        /// <returns>The rounded input value.</returns>
         public static Vector3 Ceil(Vector3 input)
         {
             return new Vector3(Ceil(input.x), Ceil(input.y), Ceil(input.z));
@@ -187,6 +201,7 @@ namespace Zigurous.Math
         /// Rounds the input up to the nearest whole number.
         /// </summary>
         /// <param name="input">The input value to round.</param>
+        /// <returns>The rounded input value.</returns>
         public static Vector3Int Ceil(Vector3Int input)
         {
             return new Vector3Int(Ceil(input.x), Ceil(input.y), Ceil(input.z));
@@ -196,102 +211,103 @@ namespace Zigurous.Math
         /// Rounds the input up to the nearest whole number.
         /// </summary>
         /// <param name="input">The input value to round.</param>
+        /// <returns>The rounded input value.</returns>
         public static Vector4 Ceil(Vector4 input)
         {
             return new Vector4(Ceil(input.x), Ceil(input.y), Ceil(input.z), Ceil(input.w));
         }
 
         /// <summary>
-        /// Clamps the input to the range
-        /// [<paramref name="min"/>..<paramref name="max"/>].
+        /// Clamps the input to the range [min..max].
         /// </summary>
         /// <param name="input">The input value to clamp.</param>
         /// <param name="min">The minimum value.</param>
         /// <param name="max">The maximum value.</param>
+        /// <returns>The clamped input value.</returns>
         public static float Clamp(float input, float min, float max)
         {
             return input < min ? min : (input > max ? max : input);
         }
 
         /// <summary>
-        /// Clamps the input to the range
-        /// [<paramref name="min"/>..<paramref name="max"/>].
+        /// Clamps the input to the range [min..max].
         /// </summary>
         /// <param name="input">The input value to clamp.</param>
         /// <param name="min">The minimum value.</param>
         /// <param name="max">The maximum value.</param>
+        /// <returns>The clamped input value.</returns>
         public static double Clamp(double input, double min, double max)
         {
             return input < min ? min : (input > max ? max : input);
         }
 
         /// <summary>
-        /// Clamps the input to the range
-        /// [<paramref name="min"/>..<paramref name="max"/>].
+        /// Clamps the input to the range [min..max].
         /// </summary>
         /// <param name="input">The input value to clamp.</param>
         /// <param name="min">The minimum value.</param>
         /// <param name="max">The maximum value.</param>
+        /// <returns>The clamped input value.</returns>
         public static int Clamp(int input, int min, int max)
         {
             return input < min ? min : (input > max ? max : input);
         }
 
         /// <summary>
-        /// Clamps the input to the range
-        /// [<paramref name="min"/>..<paramref name="max"/>].
+        /// Clamps the input to the range [min..max].
         /// </summary>
         /// <param name="input">The input value to clamp.</param>
         /// <param name="min">The minimum value.</param>
         /// <param name="max">The maximum value.</param>
+        /// <returns>The clamped input value.</returns>
         public static Vector2 Clamp(Vector2 input, Vector2 min, Vector2 max)
         {
             return new Vector2(Clamp(input.x, min.x, max.x), Clamp(input.y, min.y, max.y));
         }
 
         /// <summary>
-        /// Clamps the input to the range
-        /// [<paramref name="min"/>..<paramref name="max"/>].
+        /// Clamps the input to the range [min..max].
         /// </summary>
         /// <param name="input">The input value to clamp.</param>
         /// <param name="min">The minimum value.</param>
         /// <param name="max">The maximum value.</param>
+        /// <returns>The clamped input value.</returns>
         public static Vector2Int Clamp(Vector2Int input, Vector2Int min, Vector2Int max)
         {
             return new Vector2Int(Clamp(input.x, min.x, max.x), Clamp(input.y, min.y, max.y));
         }
 
         /// <summary>
-        /// Clamps the input to the range
-        /// [<paramref name="min"/>..<paramref name="max"/>].
+        /// Clamps the input to the range [min..max].
         /// </summary>
         /// <param name="input">The input value to clamp.</param>
         /// <param name="min">The minimum value.</param>
         /// <param name="max">The maximum value.</param>
+        /// <returns>The clamped input value.</returns>
         public static Vector3 Clamp(Vector3 input, Vector3 min, Vector3 max)
         {
             return new Vector3(Clamp(input.x, min.x, max.x), Clamp(input.y, min.y, max.y), Clamp(input.z, min.z, max.z));
         }
 
         /// <summary>
-        /// Clamps the input to the range
-        /// [<paramref name="min"/>..<paramref name="max"/>].
+        /// Clamps the input to the range [min..max].
         /// </summary>
         /// <param name="input">The input value to clamp.</param>
         /// <param name="min">The minimum value.</param>
         /// <param name="max">The maximum value.</param>
+        /// <returns>The clamped input value.</returns>
         public static Vector3Int Clamp(Vector3Int input, Vector3Int min, Vector3Int max)
         {
             return new Vector3Int(Clamp(input.x, min.x, max.x), Clamp(input.y, min.y, max.y), Clamp(input.z, min.z, max.z));
         }
 
         /// <summary>
-        /// Clamps the input to the range
-        /// [<paramref name="min"/>..<paramref name="max"/>].
+        /// Clamps the input to the range [min..max].
         /// </summary>
         /// <param name="input">The input value to clamp.</param>
         /// <param name="min">The minimum value.</param>
         /// <param name="max">The maximum value.</param>
+        /// <returns>The clamped input value.</returns>
         public static Vector4 Clamp(Vector4 input, Vector4 min, Vector4 max)
         {
             return new Vector4(Clamp(input.x, min.x, max.x), Clamp(input.y, min.y, max.y), Clamp(input.z, min.z, max.z), Clamp(input.w, min.w, max.w));
@@ -301,6 +317,7 @@ namespace Zigurous.Math
         /// Clamps the input to the range [0..1].
         /// </summary>
         /// <param name="input">The input value to clamp.</param>
+        /// <returns>The clamped input value.</returns>
         public static float Clamp01(float input)
         {
             return input < 0f ? 0f : (input > 1f ? 1f : input);
@@ -310,6 +327,7 @@ namespace Zigurous.Math
         /// Clamps the input to the range [0..1].
         /// </summary>
         /// <param name="input">The input value to clamp.</param>
+        /// <returns>The clamped input value.</returns>
         public static double Clamp01(double input)
         {
             return input < 0.0 ? 0.0 : (input > 1.0 ? 1.0 : input);
@@ -319,6 +337,7 @@ namespace Zigurous.Math
         /// Clamps the input to the range [0..1].
         /// </summary>
         /// <param name="input">The input value to clamp.</param>
+        /// <returns>The clamped input value.</returns>
         public static int Clamp01(int input)
         {
             return input >= 1 ? 1 : 0;
@@ -328,6 +347,7 @@ namespace Zigurous.Math
         /// Clamps the input to the range [0..1].
         /// </summary>
         /// <param name="input">The input value to clamp.</param>
+        /// <returns>The clamped input value.</returns>
         public static Vector2 Clamp01(Vector2 input)
         {
             return new Vector2(Clamp01(input.x), Clamp01(input.y));
@@ -337,6 +357,7 @@ namespace Zigurous.Math
         /// Clamps the input to the range [0..1].
         /// </summary>
         /// <param name="input">The input value to clamp.</param>
+        /// <returns>The clamped input value.</returns>
         public static Vector2Int Clamp01(Vector2Int input)
         {
             return new Vector2Int(Clamp01(input.x), Clamp01(input.y));
@@ -346,6 +367,7 @@ namespace Zigurous.Math
         /// Clamps the input to the range [0..1].
         /// </summary>
         /// <param name="input">The input value to clamp.</param>
+        /// <returns>The clamped input value.</returns>
         public static Vector3 Clamp01(Vector3 input)
         {
             return new Vector3(Clamp01(input.x), Clamp01(input.y), Clamp01(input.z));
@@ -355,6 +377,7 @@ namespace Zigurous.Math
         /// Clamps the input to the range [0..1].
         /// </summary>
         /// <param name="input">The input value to clamp.</param>
+        /// <returns>The clamped input value.</returns>
         public static Vector3Int Clamp01(Vector3Int input)
         {
             return new Vector3Int(Clamp01(input.x), Clamp01(input.y), Clamp01(input.z));
@@ -364,19 +387,20 @@ namespace Zigurous.Math
         /// Clamps the input to the range [0..1].
         /// </summary>
         /// <param name="input">The input value to clamp.</param>
+        /// <returns>The clamped input value.</returns>
         public static Vector4 Clamp01(Vector4 input)
         {
             return new Vector4(Clamp01(input.x), Clamp01(input.y), Clamp01(input.z), Clamp01(input.w));
         }
 
         /// <summary>
-        /// Decays the input back to zero over time at a given
-        /// <paramref name="rate"/>. The <paramref name="rate"/> is multiplied
-        /// by <c>Time.deltaTime</c>.
+        /// Decays the input back to zero over time at a given rate. The rate is
+        /// multiplied by <c>Time.deltaTime</c>.
         /// </summary>
         /// <param name="input">The input value to decay.</param>
         /// <param name="rate">How quickly the input decays.</param>
         /// <param name="target">The optional value to decay to, otherwise zero.</param>
+        /// <returns>The decayed input value.</returns>
         public static float Decay(float input, float rate, float target = 0f)
         {
             if (input > target) {
@@ -389,13 +413,13 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Decays the input back to zero over time at a given
-        /// <paramref name="rate"/>. The <paramref name="rate"/> is multiplied
-        /// by <c>Time.deltaTime</c>.
+        /// Decays the input back to zero over time at a given rate. The rate is
+        /// multiplied by <c>Time.deltaTime</c>.
         /// </summary>
         /// <param name="input">The input value to decay.</param>
         /// <param name="rate">How quickly the input decays.</param>
         /// <param name="target">The optional value to decay to, otherwise zero.</param>
+        /// <returns>The decayed input value.</returns>
         public static double Decay(double input, double rate, double target = 0.0)
         {
             if (input > target) {
@@ -411,6 +435,7 @@ namespace Zigurous.Math
         /// Rounds the input down to the nearest whole number.
         /// </summary>
         /// <param name="input">The input value to round.</param>
+        /// <returns>The rounded input value.</returns>
         public static float Floor(float input)
         {
             return Mathf.Floor(input);
@@ -420,6 +445,7 @@ namespace Zigurous.Math
         /// Rounds the input down to the nearest whole number.
         /// </summary>
         /// <param name="input">The input value to round.</param>
+        /// <returns>The rounded input value.</returns>
         public static double Floor(double input)
         {
             return System.Math.Floor(input);
@@ -429,6 +455,7 @@ namespace Zigurous.Math
         /// Rounds the input down to the nearest whole number.
         /// </summary>
         /// <param name="input">The input value to round.</param>
+        /// <returns>The rounded input value.</returns>
         public static int Floor(int input)
         {
             return Mathf.FloorToInt(input);
@@ -438,6 +465,7 @@ namespace Zigurous.Math
         /// Rounds the input down to the nearest whole number.
         /// </summary>
         /// <param name="input">The input value to round.</param>
+        /// <returns>The rounded input value.</returns>
         public static Vector2 Floor(Vector2 input)
         {
             return new Vector2(Floor(input.x), Floor(input.y));
@@ -447,6 +475,7 @@ namespace Zigurous.Math
         /// Rounds the input down to the nearest whole number.
         /// </summary>
         /// <param name="input">The input value to round.</param>
+        /// <returns>The rounded input value.</returns>
         public static Vector2Int Floor(Vector2Int input)
         {
             return new Vector2Int(Floor(input.x), Floor(input.y));
@@ -456,6 +485,7 @@ namespace Zigurous.Math
         /// Rounds the input down to the nearest whole number.
         /// </summary>
         /// <param name="input">The input value to round.</param>
+        /// <returns>The rounded input value.</returns>
         public static Vector3 Floor(Vector3 input)
         {
             return new Vector3(Floor(input.x), Floor(input.y), Floor(input.z));
@@ -465,6 +495,7 @@ namespace Zigurous.Math
         /// Rounds the input down to the nearest whole number.
         /// </summary>
         /// <param name="input">The input value to round.</param>
+        /// <returns>The rounded input value.</returns>
         public static Vector3Int Floor(Vector3Int input)
         {
             return new Vector3Int(Floor(input.x), Floor(input.y), Floor(input.z));
@@ -474,6 +505,7 @@ namespace Zigurous.Math
         /// Rounds the input down to the nearest whole number.
         /// </summary>
         /// <param name="input">The input value to round.</param>
+        /// <returns>The rounded input value.</returns>
         public static Vector4 Floor(Vector4 input)
         {
             return new Vector4(Floor(input.x), Floor(input.y), Floor(input.z), Floor(input.w));
@@ -483,6 +515,7 @@ namespace Zigurous.Math
         /// Inverts the input by multiplying by -1.
         /// </summary>
         /// <param name="input">The input value to invert.</param>
+        /// <returns>The inverted input value.</returns>
         public static float Invert(float input)
         {
             return input * -1f;
@@ -492,6 +525,7 @@ namespace Zigurous.Math
         /// Inverts the input by multiplying by -1.
         /// </summary>
         /// <param name="input">The input value to invert.</param>
+        /// <returns>The inverted input value.</returns>
         public static double Invert(double input)
         {
             return input * -1.0;
@@ -501,6 +535,7 @@ namespace Zigurous.Math
         /// Inverts the input by multiplying by -1.
         /// </summary>
         /// <param name="input">The input value to invert.</param>
+        /// <returns>The inverted input value.</returns>
         public static int Invert(int input)
         {
             return input * -1;
@@ -510,6 +545,7 @@ namespace Zigurous.Math
         /// Inverts the input by multiplying by -1.
         /// </summary>
         /// <param name="input">The input value to invert.</param>
+        /// <returns>The inverted input value.</returns>
         public static Vector2 Invert(Vector2 input)
         {
             return input * -1f;
@@ -521,6 +557,7 @@ namespace Zigurous.Math
         /// <param name="input">The input value to invert.</param>
         /// <param name="invertX">Inverts the x-axis.</param>
         /// <param name="invertY">Inverts the y-axis.</param>
+        /// <returns>The inverted input value.</returns>
         public static Vector2 Invert(Vector2 input, bool invertX, bool invertY)
         {
             Vector2 inverted = input;
@@ -533,6 +570,7 @@ namespace Zigurous.Math
         /// Inverts the input by multiplying by -1.
         /// </summary>
         /// <param name="input">The input value to invert.</param>
+        /// <returns>The inverted input value.</returns>
         public static Vector2Int Invert(Vector2Int input)
         {
             return input * -1;
@@ -544,6 +582,7 @@ namespace Zigurous.Math
         /// <param name="input">The input value to invert.</param>
         /// <param name="invertX">Inverts the x-axis.</param>
         /// <param name="invertY">Inverts the y-axis.</param>
+        /// <returns>The inverted input value.</returns>
         public static Vector2Int Invert(Vector2Int input, bool invertX, bool invertY)
         {
             Vector2Int inverted = input;
@@ -556,6 +595,7 @@ namespace Zigurous.Math
         /// Inverts the input by multiplying by -1.
         /// </summary>
         /// <param name="input">The input value to invert.</param>
+        /// <returns>The inverted input value.</returns>
         public static Vector3 Invert(Vector3 input)
         {
             return input * -1f;
@@ -568,6 +608,7 @@ namespace Zigurous.Math
         /// <param name="invertX">Inverts the x-axis.</param>
         /// <param name="invertY">Inverts the y-axis.</param>
         /// <param name="invertZ">Inverts the z-axis.</param>
+        /// <returns>The inverted input value.</returns>
         public static Vector3 Invert(Vector3 input, bool invertX, bool invertY, bool invertZ)
         {
             Vector3 inverted = input;
@@ -581,6 +622,7 @@ namespace Zigurous.Math
         /// Inverts the input by multiplying by -1.
         /// </summary>
         /// <param name="input">The input value to invert.</param>
+        /// <returns>The inverted input value.</returns>
         public static Vector3Int Invert(Vector3Int input)
         {
             return input * -1;
@@ -593,6 +635,7 @@ namespace Zigurous.Math
         /// <param name="invertX">Inverts the x-axis.</param>
         /// <param name="invertY">Inverts the y-axis.</param>
         /// <param name="invertZ">Inverts the z-axis.</param>
+        /// <returns>The inverted input value.</returns>
         public static Vector3Int Invert(Vector3Int input, bool invertX, bool invertY, bool invertZ)
         {
             Vector3Int inverted = input;
@@ -606,6 +649,7 @@ namespace Zigurous.Math
         /// Inverts the input by multiplying by -1.
         /// </summary>
         /// <param name="input">The input value to invert.</param>
+        /// <returns>The inverted input value.</returns>
         public static Vector4 Invert(Vector4 input)
         {
             return input * -1f;
@@ -619,6 +663,7 @@ namespace Zigurous.Math
         /// <param name="invertY">Inverts the y-axis.</param>
         /// <param name="invertZ">Inverts the z-axis.</param>
         /// <param name="invertW">Inverts the w-axis.</param>
+        /// <returns>The inverted input value.</returns>
         public static Vector4 Invert(Vector4 input, bool invertX, bool invertY, bool invertZ, bool invertW)
         {
             Vector4 inverted = input;
@@ -630,15 +675,14 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Normalizes the input value in the range
-        /// [<paramref name="min"/>..<paramref name="max"/>] to unsigned
-        /// normalized form [0..1] if <paramref name="min"/> is >=
-        /// <paramref name="zero"/>, and to signed normalized form [-1..1] if
-        /// <paramref name="min"/> &#60; <paramref name="zero"/>.
+        /// Normalizes the input value in the range [min..max] to unsigned
+        /// normalized form [0..1] if the min is >= zero, and to signed
+        /// normalized form [-1..1] if the min is &#60; zero.
         /// </summary>
         /// <param name="input">The input value to normalize.</param>
         /// <param name="min">The minimum value of the range.</param>
         /// <param name="max">The maximum value of the range.</param>
+        /// <returns>The normalized input value.</returns>
         public static float Normalize(float input, float min, float max, float zero = 0f)
         {
             if (min >= zero) {
@@ -649,15 +693,14 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Normalizes the input value in the range
-        /// [<paramref name="min"/>..<paramref name="max"/>] to unsigned
-        /// normalized form [0..1] if <paramref name="min"/> is >=
-        /// <paramref name="zero"/>, and to signed normalized form [-1..1] if
-        /// <paramref name="min"/> &#60; <paramref name="zero"/>.
+        /// Normalizes the input value in the range [min..max] to unsigned
+        /// normalized form [0..1] if the min is >= zero, and to signed
+        /// normalized form [-1..1] if the min is &#60; zero.
         /// </summary>
         /// <param name="input">The input value to normalize.</param>
         /// <param name="min">The minimum value of the range.</param>
         /// <param name="max">The maximum value of the range.</param>
+        /// <returns>The normalized input value.</returns>
         public static double Normalize(double input, double min, double max, double zero = 0.0)
         {
             if (min >= zero) {
@@ -672,6 +715,7 @@ namespace Zigurous.Math
         /// same as calling <c>Vector2.normalized</c>.
         /// </summary>
         /// <param name="input">The input value to normalize.</param>
+        /// <returns>The normalized input value.</returns>
         public static Vector2 Normalize(Vector2 input)
         {
             return input.normalized;
@@ -682,6 +726,7 @@ namespace Zigurous.Math
         /// same as calling <c>Vector3.normalized</c>.
         /// </summary>
         /// <param name="input">The input value to normalize.</param>
+        /// <returns>The normalized input value.</returns>
         public static Vector3 Normalize(Vector3 input)
         {
             return input.normalized;
@@ -692,6 +737,7 @@ namespace Zigurous.Math
         /// same as calling <c>Vector4.normalized</c>.
         /// </summary>
         /// <param name="input">The input value to normalize.</param>
+        /// <returns>The normalized input value.</returns>
         public static Vector4 Normalize(Vector4 input)
         {
             return input.normalized;
@@ -701,6 +747,7 @@ namespace Zigurous.Math
         /// Rounds the input to the nearest whole number.
         /// </summary>
         /// <param name="input">The input value to round.</param>
+        /// <returns>The rounded input value.</returns>
         public static float Round(float input)
         {
             return Mathf.Round(input);
@@ -710,6 +757,7 @@ namespace Zigurous.Math
         /// Rounds the input to the nearest whole number.
         /// </summary>
         /// <param name="input">The input value to round.</param>
+        /// <returns>The rounded input value.</returns>
         public static double Round(double input)
         {
             return System.Math.Round(input);
@@ -719,6 +767,7 @@ namespace Zigurous.Math
         /// Rounds the input to the nearest whole number.
         /// </summary>
         /// <param name="input">The input value to round.</param>
+        /// <returns>The rounded input value.</returns>
         public static int Round(int input)
         {
             return Mathf.RoundToInt(input);
@@ -728,6 +777,7 @@ namespace Zigurous.Math
         /// Rounds the input to the nearest whole number.
         /// </summary>
         /// <param name="input">The input value to round.</param>
+        /// <returns>The rounded input value.</returns>
         public static Vector2 Round(Vector2 input)
         {
             return new Vector2(Round(input.x), Round(input.y));
@@ -737,6 +787,7 @@ namespace Zigurous.Math
         /// Rounds the input to the nearest whole number.
         /// </summary>
         /// <param name="input">The input value to round.</param>
+        /// <returns>The rounded input value.</returns>
         public static Vector2Int Round(Vector2Int input)
         {
             return new Vector2Int(Round(input.x), Round(input.y));
@@ -746,6 +797,7 @@ namespace Zigurous.Math
         /// Rounds the input to the nearest whole number.
         /// </summary>
         /// <param name="input">The input value to round.</param>
+        /// <returns>The rounded input value.</returns>
         public static Vector3 Round(Vector3 input)
         {
             return new Vector3(Round(input.x), Round(input.y), Round(input.z));
@@ -755,6 +807,7 @@ namespace Zigurous.Math
         /// Rounds the input to the nearest whole number.
         /// </summary>
         /// <param name="input">The input value to round.</param>
+        /// <returns>The rounded input value.</returns>
         public static Vector3Int Round(Vector3Int input)
         {
             return new Vector3Int(Round(input.x), Round(input.y), Round(input.z));
@@ -764,153 +817,159 @@ namespace Zigurous.Math
         /// Rounds the input to the nearest whole number.
         /// </summary>
         /// <param name="input">The input value to round.</param>
+        /// <returns>The rounded input value.</returns>
         public static Vector4 Round(Vector4 input)
         {
             return new Vector4(Round(input.x), Round(input.y), Round(input.z), Round(input.w));
         }
 
         /// <summary>
-        /// Multiplies the input by <paramref name="factor"/>.
+        /// Multiplies the input by a factor.
         /// </summary>
         /// <param name="input">The input value to scale.</param>
         /// <param name="factor">The scale factor.</param>
+        /// <returns>The scaled input value.</returns>
         public static float Scale(float input, float factor)
         {
             return input * factor;
         }
 
         /// <summary>
-        /// Multiplies the input by <paramref name="factor"/>.
+        /// Multiplies the input by a factor.
         /// </summary>
         /// <param name="input">The input value to scale.</param>
         /// <param name="factor">The scale factor.</param>
+        /// <returns>The scaled input value.</returns>
         public static double Scale(double input, double factor)
         {
             return input * factor;
         }
 
         /// <summary>
-        /// Multiplies the input by <paramref name="factor"/>.
+        /// Multiplies the input by a factor.
         /// </summary>
         /// <param name="input">The input value to scale.</param>
         /// <param name="factor">The scale factor.</param>
+        /// <returns>The scaled input value.</returns>
         public static int Scale(int input, int factor)
         {
             return input * factor;
         }
 
         /// <summary>
-        /// Multiplies the input by <paramref name="factor"/>.
+        /// Multiplies the input by a factor.
         /// </summary>
         /// <param name="input">The input value to scale.</param>
         /// <param name="factor">The scale factor.</param>
+        /// <returns>The scaled input value.</returns>
         public static Vector2 Scale(Vector2 input, float factor)
         {
             return input * factor;
         }
 
         /// <summary>
-        /// Multiplies the input by <paramref name="x"/> along the x-axis and
-        /// <paramref name="y"/> along the y-axis.
+        /// Multiplies the input by a factor in each axis.
         /// </summary>
         /// <param name="input">The input value to scale.</param>
         /// <param name="x">The scale factor along the x-axis.</param>
         /// <param name="y">The scale factor along the y-axis.</param>
+        /// <returns>The scaled input value.</returns>
         public static Vector2 Scale(Vector2 input, float x, float y)
         {
             return new Vector2(input.x * x, input.y * y);
         }
 
         /// <summary>
-        /// Multiplies the input by <paramref name="factor"/>.
+        /// Multiplies the input by a factor.
         /// </summary>
         /// <param name="input">The input value to scale.</param>
         /// <param name="factor">The scale factor.</param>
+        /// <returns>The scaled input value.</returns>
         public static Vector2Int Scale(Vector2Int input, int factor)
         {
             return input * factor;
         }
 
         /// <summary>
-        /// Multiplies the input by <paramref name="x"/> along the x-axis and
-        /// <paramref name="y"/> along the y-axis.
+        /// Multiplies the input by a factor in each axis.
         /// </summary>
         /// <param name="input">The input value to scale.</param>
         /// <param name="x">The scale factor along the x-axis.</param>
         /// <param name="y">The scale factor along the y-axis.</param>
+        /// <returns>The scaled input value.</returns>
         public static Vector2Int Scale(Vector2Int input, int x, int y)
         {
             return new Vector2Int(input.x * x, input.y * y);
         }
 
         /// <summary>
-        /// Multiplies the input by <paramref name="factor"/>.
+        /// Multiplies the input by a factor.
         /// </summary>
         /// <param name="input">The input value to scale.</param>
         /// <param name="factor">The scale factor.</param>
+        /// <returns>The scaled input value.</returns>
         public static Vector3 Scale(Vector3 input, float factor)
         {
             return input * factor;
         }
 
         /// <summary>
-        /// Multiplies the input by <paramref name="x"/> along the x-axis,
-        /// <paramref name="y"/> along the y-axis, and <paramref name="z"/>
-        /// along the z-axis.
+        /// Multiplies the input by a factor in each axis.
         /// </summary>
         /// <param name="input">The input value to scale.</param>
         /// <param name="x">The scale factor along the x-axis.</param>
         /// <param name="y">The scale factor along the y-axis.</param>
         /// <param name="z">The scale factor along the z-axis.</param>
+        /// <returns>The scaled input value.</returns>
         public static Vector3 Scale(Vector3 input, float x, float y, float z)
         {
             return new Vector3(input.x * x, input.y * y, input.z * z);
         }
 
         /// <summary>
-        /// Multiplies the input by <paramref name="factor"/>.
+        /// Multiplies the input by a factor.
         /// </summary>
         /// <param name="input">The input value to scale.</param>
         /// <param name="factor">The scale factor.</param>
+        /// <returns>The scaled input value.</returns>
         public static Vector3Int Scale(Vector3Int input, int factor)
         {
             return input * factor;
         }
 
         /// <summary>
-        /// Multiplies the input by <paramref name="x"/> along the x-axis,
-        /// <paramref name="y"/> along the y-axis, and <paramref name="z"/>
-        /// along the z-axis.
+        /// Multiplies the input by a factor in each axis.
         /// </summary>
         /// <param name="input">The input value to scale.</param>
         /// <param name="x">The scale factor along the x-axis.</param>
         /// <param name="y">The scale factor along the y-axis.</param>
         /// <param name="z">The scale factor along the z-axis.</param>
+        /// <returns>The scaled input value.</returns>
         public static Vector3Int Scale(Vector3Int input, int x, int y, int z)
         {
             return new Vector3Int(input.x * x, input.y * y, input.z * z);
         }
 
         /// <summary>
-        /// Multiplies the input by <paramref name="factor"/>.
+        /// Multiplies the input by a factor.
         /// </summary>
         /// <param name="input">The input value to scale.</param>
         /// <param name="factor">The scale factor.</param>
+        /// <returns>The scaled input value.</returns>
         public static Vector4 Scale(Vector4 input, float factor)
         {
             return input * factor;
         }
 
         /// <summary>
-        /// Multiplies the input by <paramref name="x"/> along the x-axis,
-        /// <paramref name="y"/> along the y-axis, <paramref name="z"/> along
-        /// the z-axis, and <paramref name="w"/> along the w-axis.
+        /// Multiplies the input by a factor in each axis.
         /// </summary>
         /// <param name="input">The input value to scale.</param>
         /// <param name="x">The scale factor along the x-axis.</param>
         /// <param name="y">The scale factor along the y-axis.</param>
         /// <param name="z">The scale factor along the z-axis.</param>
         /// <param name="w">The scale factor along the w-axis.</param>
+        /// <returns>The scaled input value.</returns>
         public static Vector4 Scale(Vector4 input, float x, float y, float z, float w)
         {
             return new Vector4(input.x * x, input.y * y, input.z * z, input.w * w);
@@ -918,13 +977,13 @@ namespace Zigurous.Math
 
         /// <summary>
         /// A stick deadzone scales the input such that any value with a
-        /// magnitude smaller than <paramref name="min"/> results in (0,0), and
-        /// any value with a magnitude greater than <paramref name="max"/> is
-        /// normalized to unit length (1).
+        /// magnitude smaller than the min results in (0,0), and any value with
+        /// a magnitude greater than the max is normalized to unit length (1).
         /// </summary>
         /// <param name="input">The input value to scale.</param>
         /// <param name="min">The lower deadzone threshold.</param>
         /// <param name="max">The upper deadzone threshold.</param>
+        /// <returns>The scaled input value.</returns>
         public static Vector2 StickDeadzone(Vector2 input, float min = 0.125f, float max = 0.925f)
         {
             float magnitude = input.magnitude;
@@ -934,11 +993,43 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Wraps the input to the range
-        /// [<paramref name="min"/>..<paramref name="max"/>]. If the value
-        /// exceeds <paramref name="max"/> it wraps around to
-        /// <paramref name="min"/>, and if the value is less than
-        /// <paramref name="min"/> it wraps back to <paramref name="max"/>.
+        /// A stick deadzone scales the input such that any value with a
+        /// magnitude smaller than the min results in (0,0), and any value with
+        /// a magnitude greater than the max is normalized to unit length (1).
+        /// </summary>
+        /// <param name="input">The input value to scale.</param>
+        /// <param name="min">The lower deadzone threshold.</param>
+        /// <param name="max">The upper deadzone threshold.</param>
+        /// <returns>The scaled input value.</returns>
+        public static Vector3 StickDeadzone(Vector3 input, float min = 0.125f, float max = 0.925f)
+        {
+            float magnitude = input.magnitude;
+            if (magnitude < min) return Vector3.zero;
+            if (magnitude > max) return input.normalized;
+            return input;
+        }
+
+        /// <summary>
+        /// A stick deadzone scales the input such that any value with a
+        /// magnitude smaller than the min results in (0,0), and any value with
+        /// a magnitude greater than the max is normalized to unit length (1).
+        /// </summary>
+        /// <param name="input">The input value to scale.</param>
+        /// <param name="min">The lower deadzone threshold.</param>
+        /// <param name="max">The upper deadzone threshold.</param>
+        /// <returns>The scaled input value.</returns>
+        public static Vector4 StickDeadzone(Vector4 input, float min = 0.125f, float max = 0.925f)
+        {
+            float magnitude = input.magnitude;
+            if (magnitude < min) return Vector4.zero;
+            if (magnitude > max) return input.normalized;
+            return input;
+        }
+
+        /// <summary>
+        /// Wraps the input to the range [min..max]. If the value exceeds the
+        /// max it wraps around to the min, and if the value is less than the
+        /// min it wraps back to max.
         /// </summary>
         /// <param name="input">The input value to wrap.</param>
         /// <param name="min">The minimum value of the range.</param>
@@ -955,11 +1046,9 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Wraps the input to the range
-        /// [<paramref name="min"/>..<paramref name="max"/>]. If the value
-        /// exceeds <paramref name="max"/> it wraps around to
-        /// <paramref name="min"/>, and if the value is less than
-        /// <paramref name="min"/> it wraps back to <paramref name="max"/>.
+        /// Wraps the input to the range [min..max]. If the value exceeds the
+        /// max it wraps around to the min, and if the value is less than the
+        /// min it wraps back to max.
         /// </summary>
         /// <param name="input">The input value to wrap.</param>
         /// <param name="min">The minimum value of the range.</param>
@@ -976,11 +1065,9 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Wraps the input to the range
-        /// [<paramref name="min"/>..<paramref name="max"/>). If the value
-        /// exceeds <paramref name="max"/> it wraps around to
-        /// <paramref name="min"/>, and if the value is less than
-        /// <paramref name="min"/> it wraps back to <paramref name="max"/>.
+        /// Wraps the input to the range [min..max]. If the value exceeds the
+        /// max it wraps around to the min, and if the value is less than the
+        /// min it wraps back to max.
         /// </summary>
         /// <param name="input">The input value to wrap.</param>
         /// <param name="min">The minimum value of the range.</param>
@@ -995,11 +1082,9 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Wraps the input to the range
-        /// [<paramref name="min"/>..<paramref name="max"/>]. If the value
-        /// exceeds <paramref name="max"/> it wraps around to
-        /// <paramref name="min"/>, and if the value is less than
-        /// <paramref name="min"/> it wraps back to <paramref name="max"/>.
+        /// Wraps the input to the range [min..max]. If the value exceeds the
+        /// max it wraps around to the min, and if the value is less than the
+        /// min it wraps back to max.
         /// </summary>
         /// <param name="input">The input value to wrap.</param>
         /// <param name="min">The minimum value of the range.</param>
@@ -1012,11 +1097,9 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Wraps the input to the range
-        /// [<paramref name="min"/>..<paramref name="max"/>]. If the value
-        /// exceeds <paramref name="max"/> it wraps around to
-        /// <paramref name="min"/>, and if the value is less than
-        /// <paramref name="min"/> it wraps back to <paramref name="max"/>.
+        /// Wraps the input to the range [min..max]. If the value exceeds the
+        /// max it wraps around to the min, and if the value is less than the
+        /// min it wraps back to max.
         /// </summary>
         /// <param name="input">The input value to wrap.</param>
         /// <param name="min">The minimum value of the range.</param>
@@ -1029,11 +1112,9 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Wraps the input to the range
-        /// [<paramref name="min"/>..<paramref name="max"/>]. If the value
-        /// exceeds <paramref name="max"/> it wraps around to
-        /// <paramref name="min"/>, and if the value is less than
-        /// <paramref name="min"/> it wraps back to <paramref name="max"/>.
+        /// Wraps the input to the range [min..max]. If the value exceeds the
+        /// max it wraps around to the min, and if the value is less than the
+        /// min it wraps back to max.
         /// </summary>
         /// <param name="input">The input value to wrap.</param>
         /// <param name="min">The minimum value of the range.</param>
@@ -1047,11 +1128,9 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Wraps the input to the range
-        /// [<paramref name="min"/>..<paramref name="max"/>]. If the value
-        /// exceeds <paramref name="max"/> it wraps around to
-        /// <paramref name="min"/>, and if the value is less than
-        /// <paramref name="min"/> it wraps back to <paramref name="max"/>.
+        /// Wraps the input to the range [min..max]. If the value exceeds the
+        /// max it wraps around to the min, and if the value is less than the
+        /// min it wraps back to max.
         /// </summary>
         /// <param name="input">The input value to wrap.</param>
         /// <param name="min">The minimum value of the range.</param>
@@ -1065,11 +1144,9 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Wraps the input to the range
-        /// [<paramref name="min"/>..<paramref name="max"/>]. If the value
-        /// exceeds <paramref name="max"/> it wraps around to
-        /// <paramref name="min"/>, and if the value is less than
-        /// <paramref name="min"/> it wraps back to <paramref name="max"/>.
+        /// Wraps the input to the range [min..max]. If the value exceeds the
+        /// max it wraps around to the min, and if the value is less than the
+        /// min it wraps back to max.
         /// </summary>
         /// <param name="input">The input value to wrap.</param>
         /// <param name="min">The minimum value of the range.</param>

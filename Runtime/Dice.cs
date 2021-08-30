@@ -6,18 +6,19 @@
     public static class Dice
     {
         /// <summary>
-        /// Returns a random number on a 4-sided dice [1..4].
+        /// Rolls a 4-sided dice [1..4].
         /// </summary>
+        /// <returns>A random number on a 4-sided dice [1..4].</returns>
         public static int D4()
         {
             return UnityEngine.Random.Range(1, 5);
         }
 
         /// <summary>
-        /// Returns the sum of rolling a 4-sided dice [1..4]
-        /// <paramref name="n"/> times.
+        /// Rolls a 4-sided dice [1..4] <paramref name="n"/> times.
         /// </summary>
         /// <param name="n">The number of times to roll the dice.</param>
+        /// <returns>The sum of the rolls.</returns>
         public static int D4(int n)
         {
             int roll = 0;
@@ -26,18 +27,19 @@
         }
 
         /// <summary>
-        /// Returns a random number on a 6-sided dice [1..6].
+        /// Rolls a 6-sided dice [1..6].
         /// </summary>
+        /// <returns>A random number on a 6-sided dice [1..6].</returns>
         public static int D6()
         {
             return UnityEngine.Random.Range(1, 7);
         }
 
         /// <summary>
-        /// Returns the sum of rolling a 6-sided dice [1..6]
-        /// <paramref name="n"/> times.
+        /// Rolls a 6-sided dice [1..6] <paramref name="n"/> times.
         /// </summary>
         /// <param name="n">The number of times to roll the dice.</param>
+        /// <returns>The sum of the rolls.</returns>
         public static int D6(int n)
         {
             int roll = 0;
@@ -46,18 +48,19 @@
         }
 
         /// <summary>
-        /// Returns a random number on an 8-sided dice [1..8].
+        /// Rolls an 8-sided dice [1..8].
         /// </summary>
+        /// <returns>A random number on an 8-sided dice [1..8].</returns>
         public static int D8()
         {
             return UnityEngine.Random.Range(1, 9);
         }
 
         /// <summary>
-        /// Returns the sum of rolling an 8-sided dice [1..8]
-        /// <paramref name="n"/> times.
+        /// Rolls an 8-sided dice [1..8] <paramref name="n"/> times.
         /// </summary>
         /// <param name="n">The number of times to roll the dice.</param>
+        /// <returns>The sum of the rolls.</returns>
         public static int D8(int n)
         {
             int roll = 0;
@@ -66,18 +69,19 @@
         }
 
         /// <summary>
-        /// Returns a random number on a 10-sided dice [1..10].
+        /// Rolls a 10-sided dice [1..10].
         /// </summary>
+        /// <returns>A random number on a 10-sided dice [1..10].</returns>
         public static int D10()
         {
             return UnityEngine.Random.Range(1, 11);
         }
 
         /// <summary>
-        /// Returns the sum of rolling a 10-sided dice [1..10]
-        /// <paramref name="n"/> times.
+        /// Rolls a 10-sided dice [1..10] <paramref name="n"/> times.
         /// </summary>
         /// <param name="n">The number of times to roll the dice.</param>
+        /// <returns>The sum of the rolls.</returns>
         public static int D10(int n)
         {
             int roll = 0;
@@ -86,18 +90,19 @@
         }
 
         /// <summary>
-        /// Returns a random number on a 12-sided dice [1..12].
+        /// Rolls a 12-sided dice [1..12].
         /// </summary>
+        /// <returns>A random number on a 12-sided dice [1..12].</returns>
         public static int D12()
         {
             return UnityEngine.Random.Range(1, 13);
         }
 
         /// <summary>
-        /// Returns the sum of rolling a 12-sided dice [1..12]
-        /// <paramref name="n"/> times.
+        /// Rolls a 12-sided dice [1..12] <paramref name="n"/> times.
         /// </summary>
         /// <param name="n">The number of times to roll the dice.</param>
+        /// <returns>The sum of the rolls.</returns>
         public static int D12(int n)
         {
             int roll = 0;
@@ -106,18 +111,19 @@
         }
 
         /// <summary>
-        /// Returns a random number on a 20-sided dice [1..20].
+        /// Rolls a 20-sided dice [1..20].
         /// </summary>
+        /// <returns>A random number on a 20-sided dice [1..20].</returns>
         public static int D20()
         {
             return UnityEngine.Random.Range(1, 21);
         }
 
         /// <summary>
-        /// Returns the sum of rolling a 20-sided dice [1..20]
-        /// <paramref name="n"/> times.
+        /// Rolls a 20-sided dice [1..20] <paramref name="n"/> times.
         /// </summary>
         /// <param name="n">The number of times to roll the dice.</param>
+        /// <returns>The sum of the rolls.</returns>
         public static int D20(int n)
         {
             int roll = 0;
@@ -126,18 +132,19 @@
         }
 
         /// <summary>
-        /// Returns a random number on a 48-sided dice [1..48].
+        /// Rolls a 48-sided dice [1..48].
         /// </summary>
+        /// <returns>A random number on a 48-sided dice [1..48].</returns>
         public static int D48()
         {
             return UnityEngine.Random.Range(1, 49);
         }
 
         /// <summary>
-        /// Returns the sum of rolling a 48-sided dice [1..48]
-        /// <paramref name="n"/> times.
+        /// Rolls a 48-sided dice [1..48] <paramref name="n"/> times.
         /// </summary>
         /// <param name="n">The number of times to roll the dice.</param>
+        /// <returns>The sum of the rolls.</returns>
         public static int D48(int n)
         {
             int roll = 0;
@@ -146,18 +153,19 @@
         }
 
         /// <summary>
-        /// Returns a random number on a 100-sided dice [1..100].
+        /// Rolls a 100-sided dice [1..100].
         /// </summary>
+        /// <returns>A random number on a 100-sided dice [1..100].</returns>
         public static int D100()
         {
             return UnityEngine.Random.Range(1, 101);
         }
 
         /// <summary>
-        /// Returns the sum of rolling a 100-sided dice [1..100]
-        /// <paramref name="n"/> times.
+        /// Rolls a 100-sided dice [1..100] <paramref name="n"/> times.
         /// </summary>
         /// <param name="n">The number of times to roll the dice.</param>
+        /// <returns>The sum of the rolls.</returns>
         public static int D100(int n)
         {
             int roll = 0;
@@ -166,20 +174,21 @@
         }
 
         /// <summary>
-        /// Returns a random number on an n-sided dice [1..<paramref name="n"/>].
+        /// Rolls an n-sided dice [1..<paramref name="n"/>].
         /// </summary>
         /// <param name="n">The number of sides on the dice.</param>
+        /// <returns>A random number on an n-sided dice [1..<paramref name="n"/>].</returns>
         public static int NSided(int n)
         {
             return UnityEngine.Random.Range(1, n + 1);
         }
 
         /// <summary>
-        /// Returns the sum of rolling an n-sided dice [1..<paramref name="n"/>]
-        /// <paramref name="x"/> amount of times.
+        /// Rolls an n-sided dice [1..<paramref name="n"/>] <paramref name="x"/> amount of times.
         /// </summary>
         /// <param name="n">The number of sides on the dice.</param>
         /// <param name="x">The number of times to roll the dice.</param>
+        /// <returns>The sum of the rolls.</returns>
         public static int NSided(int n, int x)
         {
             int roll = 0;
@@ -188,64 +197,79 @@
         }
 
         /// <summary>
-        /// Returns a random value on a dice with custom values.
+        /// Rolls a custom dice.
         /// </summary>
-        /// <param name="values">The values of the dice.</param>
-        public static int Roll(int[] values)
+        /// <param name="dice">The numbered sides of the dice.</param>
+        /// <returns>A random number on the dice.</returns>
+        public static int Roll(int[] dice)
         {
-            return values[UnityEngine.Random.Range(0, values.Length)];
+            return dice[UnityEngine.Random.Range(0, dice.Length)];
         }
 
         /// <summary>
-        /// Returns the sum of rolling a dice with custom values
-        /// <paramref name="n"/> amount of times.
+        /// Rolls a custom dice <paramref name="n"/> amount of times.
         /// </summary>
-        /// <param name="values">The values of the dice.</param>
+        /// <param name="dice">The numbered sides of the dice.</param>
         /// <param name="n">The number of times to roll the dice.</param>
-        public static int Roll(int[] values, int n)
+        /// <returns>The sum of the rolls.</returns>
+        public static int Roll(int[] dice, int n)
         {
             int roll = 0;
-            while (n-- > 0) roll += Roll(values);
+            while (n-- > 0) roll += Roll(dice);
             return roll;
         }
 
         /// <summary>
-        /// Returns a random value on a dice with custom values.
+        /// Rolls a custom dice.
         /// </summary>
-        /// <typeparam name="T">The type of value to choose.</typeparam>
-        /// <param name="values">The values of the dice.</param>
-        public static T Roll<T>(T[] values)
+        /// <typeparam name="T">The type of values of the dice.</typeparam>
+        /// <param name="dice">The values of the dice.</param>
+        /// <returns>A random value on the dice.</returns>
+        public static T Roll<T>(T[] dice)
         {
-            return values[UnityEngine.Random.Range(0, values.Length)];
+            return dice[UnityEngine.Random.Range(0, dice.Length)];
         }
 
         /// <summary>
-        /// Returns a random value from an array of <paramref name="values"/>
-        /// with probability proportional to the given set of
-        /// <paramref name="probabilities"/>.
+        /// Rolls a custom dice with weighted probabilities.
         /// </summary>
-        /// <typeparam name="T">The type of value to choose.</typeparam>
-        /// <param name="values">The values to choose from.</param>
-        /// <param name="probabilities">The probabilities of each value.</param>
-        public static T Roll<T>(T[] values, int[] probabilities)
+        /// <typeparam name="T">The type of values of the dice.</typeparam>
+        /// <param name="dice">The values of the dice.</param>
+        /// <param name="weights">The probabilities of each value.</param>
+        /// <returns>A random value on the dice.</returns>
+        public static T Roll<T>(T[] dice, int[] weights)
         {
-            // OPTIMIZE: Prevent allocation of a new array each time.
-            T[] extendedRange = new T[probabilities.Sum()];
+            int weightedTotal = 0;
 
-            int length = System.Math.Min(values.Length, probabilities.Length);
-            int count = 0;
-
-            for (int i = 0; i < length; i++)
-            {
-                T value = values[i];
-                int frequency = probabilities[i];
-
-                while (--frequency > 0) {
-                    extendedRange[count++] = value;
-                }
+            for (int i = 0; i < weights.Length; i++) {
+                weightedTotal += weights[i];
             }
 
-            return extendedRange[UnityEngine.Random.Range(0, extendedRange.Length)];
+            float roll = UnityEngine.Random.value;
+            float min = 0f;
+
+            for (int i = 0; i < weights.Length; i++)
+            {
+                float weight = (float)weights[i] / weightedTotal;
+                float max = min + weight;
+
+                if (i == weights.Length - 1)
+                {
+                    if (roll >= min && roll <= max) {
+                        return dice[i];
+                    }
+                }
+                else
+                {
+                    if (roll >= min && roll < max) {
+                        return dice[i];
+                    }
+                }
+
+                min = max;
+            }
+
+            return default(T);
         }
 
     }

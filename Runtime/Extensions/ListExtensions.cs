@@ -48,9 +48,10 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Returns the sum of all items in the list.
+        /// Calculates the sum of all items in the list.
         /// </summary>
         /// <param name="list">The list to sum.</param>
+        /// <returns>The sum of all items in the list.</returns>
         public static int Sum(this List<int> list)
         {
             int sum = 0;
@@ -63,9 +64,10 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Returns the sum of all items in the list.
+        /// Calculates the sum of all items in the list.
         /// </summary>
         /// <param name="list">The list to sum.</param>
+        /// <returns>The sum of all items in the list.</returns>
         public static float Sum(this List<float> list)
         {
             float sum = 0;
@@ -78,9 +80,10 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Returns the sum of all items in the list.
+        /// Calculates the sum of all items in the list.
         /// </summary>
         /// <param name="list">The list to sum.</param>
+        /// <returns>The sum of all items in the list.</returns>
         public static double Sum(this List<double> list)
         {
             double sum = 0;
