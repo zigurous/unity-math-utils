@@ -13,6 +13,7 @@
   "repository": "https://github.com/zigurous/unity-math-utils",
   "documentationUrl": "https://docs.zigurous.com/com.zigurous.math",
   "changelogUrl": "https://docs.zigurous.com/com.zigurous.math/changelog",
+  "licensesUrl": "https://docs.zigurous.com/com.zigurous.math/license",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@zigurous"
   },
