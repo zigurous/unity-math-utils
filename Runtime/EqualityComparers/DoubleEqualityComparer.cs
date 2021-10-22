@@ -21,7 +21,7 @@ namespace Zigurous.Math
         /// <returns>True if the values are equal, false otherwise.</returns>
         public bool Equals(double x, double y)
         {
-            return System.Math.Round(x, this.digits) == System.Math.Round(y, this.digits);
+            return System.Math.Round(x, digits) == System.Math.Round(y, digits);
         }
 
         /// <summary>
@@ -31,7 +31,7 @@ namespace Zigurous.Math
         /// <returns>The hash code for the value.</returns>
         public int GetHashCode(double value)
         {
-            return System.Math.Round(value, this.digits).GetHashCode();
+            return System.Math.Round(value, digits).GetHashCode();
         }
 
     }

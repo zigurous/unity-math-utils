@@ -68,7 +68,7 @@ namespace Zigurous.Math
         /// <returns>The number abbreviated as a string.</returns>
         public string Format(int number)
         {
-            return (number / this.factor).ToString(this.format);
+            return (number / factor).ToString(format);
         }
 
         /// <summary>
@@ -78,7 +78,7 @@ namespace Zigurous.Math
         /// <returns>The number abbreviated as a string.</returns>
         public string Format(float number)
         {
-            return (number / this.factor).ToString(this.format);
+            return (number / factor).ToString(format);
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace Zigurous.Math
         /// <returns>The number abbreviated as a string.</returns>
         public string Format(double number)
         {
-            return (number / this.factor).ToString(this.format);
+            return (number / factor).ToString(format);
         }
 
     }
