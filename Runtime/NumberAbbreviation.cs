@@ -94,7 +94,7 @@ namespace Zigurous.Math
     }
 
     /// <summary>
-    /// Extensions methods for <see cref="NumberAbbreviation"/>.
+    /// Extension methods for <see cref="NumberAbbreviation"/>.
     /// </summary>
     public static class NumberAbbreviationExtensions
     {
