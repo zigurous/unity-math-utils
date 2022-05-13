@@ -1076,8 +1076,10 @@ namespace Zigurous.Math
         {
             if (input < min) {
                 return max - (min - input) % (max - min);
-            } else {
+            } else if (input > max) {
                 return min + (input - min) % (max - min);
+            } else {
+                return input;
             }
         }
 
@@ -1201,8 +1203,10 @@ namespace Zigurous.Math
         {
             if (input < 0) {
                 return 1 - (-input % 1);
-            } else {
+            } else if (input > 1) {
                 return input % 1;
+            } else {
+                return input;
             }
         }
 
