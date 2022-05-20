@@ -8,18 +8,24 @@ The **Math Utils** package provides extensions and utilities for working with nu
 
 <hr/>
 
-## 📌 Overview
+## Overview
 
-- [Scripting API](/api/Zigurous.Math)
-- [Installation](/manual/installation)
-- [Changelog](/changelog)
-- [License](/license)
+#### ⚙️ [Installation](/installation)
+
+#### 🧰 [Scripting API](/api/Zigurous.Math)
+
+#### 📋 [Changelog](/changelog)
+
+#### ⚖️ [License](/license)
 
 <hr/>
 
-## 📖 Reference
+## Reference
 
-- [Input Processors](/manual/processors)
-- [Random Chance](/manual/chance)
-- [Number Abbreviations](/manual/abbreviations)
-- [Extension Methods](/manual/extensions)
+#### 🔢 [Input Processors](/manual/processors)
+
+#### 🎲 [Random Chance](/manual/chance)
+
+#### 💯 [Number Abbreviations](/manual/abbreviations)
+
+#### 🔌 [Extension Methods](/manual/extensions)
