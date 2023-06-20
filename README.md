@@ -7,7 +7,7 @@ The **Math Utils** package provides extensions and utilities for working with nu
 ## Reference
 
 - [Input Processors](https://docs.zigurous.com/com.zigurous.math/manual/processors)
-- [Random Chance](https://docs.zigurous.com/com.zigurous.math/manual/chance)
+- [Random Values](https://docs.zigurous.com/com.zigurous.math/manual/random)
 - [Number Abbreviations](https://docs.zigurous.com/com.zigurous.math/manual/abbreviations)
 - [Extension Methods](https://docs.zigurous.com/com.zigurous.math/manual/extensions)
 

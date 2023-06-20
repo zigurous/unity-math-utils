@@ -24,7 +24,7 @@ The **Math Utils** package provides extensions and utilities for working with nu
 
 #### 🔢 [Input Processors](/manual/processors)
 
-#### 🎲 [Random Chance](/manual/chance)
+#### 🎲 [Random Values](/manual/random)
 
 #### 💯 [Number Abbreviations](/manual/abbreviations)
 
