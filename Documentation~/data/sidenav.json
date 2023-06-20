@@ -28,8 +28,8 @@
         "path": "/manual/processors"
       },
       {
-        "name": "Random Chance",
-        "path": "/manual/chance"
+        "name": "Random Numbers",
+        "path": "/manual/random"
       },
       {
         "name": "Number Abbreviations",
