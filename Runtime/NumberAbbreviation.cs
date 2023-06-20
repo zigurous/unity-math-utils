@@ -66,26 +66,6 @@ namespace Zigurous.Math
         /// </summary>
         /// <param name="number">The number to abbreviate.</param>
         /// <returns>The number abbreviated as a string.</returns>
-        public string Format(int number)
-        {
-            return (number / factor).ToString(format);
-        }
-
-        /// <summary>
-        /// Abbreviates a number to a string.
-        /// </summary>
-        /// <param name="number">The number to abbreviate.</param>
-        /// <returns>The number abbreviated as a string.</returns>
-        public string Format(float number)
-        {
-            return (number / factor).ToString(format);
-        }
-
-        /// <summary>
-        /// Abbreviates a number to a string.
-        /// </summary>
-        /// <param name="number">The number to abbreviate.</param>
-        /// <returns>The number abbreviated as a string.</returns>
         public string Format(double number)
         {
             return (number / factor).ToString(format);
@@ -98,28 +78,6 @@ namespace Zigurous.Math
     /// </summary>
     public static class NumberAbbreviationExtensions
     {
-        /// <summary>
-        /// Abbreviates a number to a string with the given set of abbreviations.
-        /// </summary>
-        /// <param name="abbreviations">The possible abbreviations to apply.</param>
-        /// <param name="number">The number to abbreviate.</param>
-        /// <returns>The number abbreviated as a string, or the number as a string if no abbreviations apply.</returns>
-        public static string Format(this NumberAbbreviation[] abbreviations, int number)
-        {
-            int abs = System.Math.Abs(number);
-
-            for (int i = 0; i < abbreviations.Length; i++)
-            {
-                NumberAbbreviation abbreviation = abbreviations[i];
-
-                if (abs >= abbreviation.factor) {
-                    return abbreviation.Format(number);
-                }
-            }
-
-            return number.ToString();
-        }
-
         /// <summary>
         /// Abbreviates a number to a string with the given set of abbreviations.
         /// </summary>
@@ -151,6 +109,72 @@ namespace Zigurous.Math
         public static string Format(this NumberAbbreviation[] abbreviations, double number)
         {
             double abs = System.Math.Abs(number);
+
+            for (int i = 0; i < abbreviations.Length; i++)
+            {
+                NumberAbbreviation abbreviation = abbreviations[i];
+
+                if (abs >= abbreviation.factor) {
+                    return abbreviation.Format(number);
+                }
+            }
+
+            return number.ToString();
+        }
+
+        /// <summary>
+        /// Abbreviates a number to a string with the given set of abbreviations.
+        /// </summary>
+        /// <param name="abbreviations">The possible abbreviations to apply.</param>
+        /// <param name="number">The number to abbreviate.</param>
+        /// <returns>The number abbreviated as a string, or the number as a string if no abbreviations apply.</returns>
+        public static string Format(this NumberAbbreviation[] abbreviations, int number)
+        {
+            int abs = System.Math.Abs(number);
+
+            for (int i = 0; i < abbreviations.Length; i++)
+            {
+                NumberAbbreviation abbreviation = abbreviations[i];
+
+                if (abs >= abbreviation.factor) {
+                    return abbreviation.Format(number);
+                }
+            }
+
+            return number.ToString();
+        }
+
+        /// <summary>
+        /// Abbreviates a number to a string with the given set of abbreviations.
+        /// </summary>
+        /// <param name="abbreviations">The possible abbreviations to apply.</param>
+        /// <param name="number">The number to abbreviate.</param>
+        /// <returns>The number abbreviated as a string, or the number as a string if no abbreviations apply.</returns>
+        public static string Format(this NumberAbbreviation[] abbreviations, short number)
+        {
+            short abs = System.Math.Abs(number);
+
+            for (int i = 0; i < abbreviations.Length; i++)
+            {
+                NumberAbbreviation abbreviation = abbreviations[i];
+
+                if (abs >= abbreviation.factor) {
+                    return abbreviation.Format(number);
+                }
+            }
+
+            return number.ToString();
+        }
+
+        /// <summary>
+        /// Abbreviates a number to a string with the given set of abbreviations.
+        /// </summary>
+        /// <param name="abbreviations">The possible abbreviations to apply.</param>
+        /// <param name="number">The number to abbreviate.</param>
+        /// <returns>The number abbreviated as a string, or the number as a string if no abbreviations apply.</returns>
+        public static string Format(this NumberAbbreviation[] abbreviations, long number)
+        {
+            long abs = System.Math.Abs(number);
 
             for (int i = 0; i < abbreviations.Length; i++)
             {
