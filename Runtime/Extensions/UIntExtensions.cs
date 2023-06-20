@@ -3,7 +3,7 @@
 namespace Zigurous.Math
 {
     /// <summary>
-    /// Extension methods for uints.
+    /// Extension methods for unsigned integers.
     /// </summary>
     public static class UIntExtensions
     {

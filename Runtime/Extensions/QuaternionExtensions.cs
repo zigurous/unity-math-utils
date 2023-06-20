@@ -3,7 +3,7 @@
 namespace Zigurous.Math
 {
     /// <summary>
-    /// Extension methods for quaternions.
+    /// Extension methods for Quaternion.
     /// </summary>
     public static class QuaternionExtensions
     {

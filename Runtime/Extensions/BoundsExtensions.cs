@@ -3,7 +3,7 @@
 namespace Zigurous.Math
 {
     /// <summary>
-    /// Extension methods for bounds.
+    /// Extension methods for Bounds.
     /// </summary>
     public static class BoundsExtensions
     {
