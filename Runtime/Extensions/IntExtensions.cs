@@ -3,7 +3,7 @@
 namespace Zigurous.Math
 {
     /// <summary>
-    /// Extension methods for ints.
+    /// Extension methods for integers.
     /// </summary>
     public static class IntExtensions
     {

@@ -1,7 +1,7 @@
 ﻿namespace Zigurous.Math
 {
     /// <summary>
-    /// Extension methods for longs.
+    /// Extension methods for long integers.
     /// </summary>
     public static class LongExtensions
     {

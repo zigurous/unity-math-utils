@@ -5,6 +5,35 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2023/06/20
+
+### Added
+
+- Constructors to specify the amount of digits on `FloatEqualityComparer` and `DoubleEqualityComparer`
+- Overloads for `short` and `long` number abbreviations
+- New `ComparisonSign` enum
+- New `Bounds` extensions
+  - `Lerp`
+  - `LerpUnclamped`
+  - `InverseLerp`
+  - `CalculateScale`
+- New `Rect` extensions
+  - `Contains`
+  - `Encapsulate`
+  - `Lerp`
+  - `LerpUnclamped`
+  - `InverseLerp`
+- New `Transform` extensions
+  - `AveragePositionOfChildren`
+  - `CenterPositionOfChildren`
+  - `Reset`
+  - `ResetLocal`
+  - `SetPosition`
+  - `SetLocalPosition`
+  - `SetEulerAngles`
+  - `SetLocalEulerAngles`
+  - `SetLocalScale`
+
 ## [1.1.1] - 2022/05/19
 
 ### Fixed

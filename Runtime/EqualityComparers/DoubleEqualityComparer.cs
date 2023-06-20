@@ -11,7 +11,25 @@ namespace Zigurous.Math
         /// <summary>
         /// The number of decimal digits to compare when determining equality.
         /// </summary>
-        public int digits = 3;
+        public int digits;
+
+        /// <summary>
+        /// Creates a new DoubleEqualityComparer with a default of 3 decimal
+        /// digits to compare when determining equality.
+        /// </summary>
+        public DoubleEqualityComparer()
+        {
+            this.digits = 3;
+        }
+
+        /// <summary>
+        /// Creates a new DoubleEqualityComparer with the specified number of
+        /// decimal digits to compare when determining equality.
+        /// </summary>
+        public DoubleEqualityComparer(int digits)
+        {
+            this.digits = digits;
+        }
 
         /// <summary>
         /// Checks the equality of two double values.

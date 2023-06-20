@@ -1,7 +1,7 @@
 ﻿namespace Zigurous.Math
 {
     /// <summary>
-    /// Extension methods for shorts.
+    /// Extension methods for short integers.
     /// </summary>
     public static class ShortExtensions
     {

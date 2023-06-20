@@ -3,7 +3,7 @@
 namespace Zigurous.Math
 {
     /// <summary>
-    /// Extension methods for quaternions.
+    /// Extension methods for Quaternion.
     /// </summary>
     public static class QuaternionExtensions
     {
@@ -16,7 +16,7 @@ namespace Zigurous.Math
         /// <param name="target">The position we are trying to reach.</param>
         /// <param name="currentVelocity">The current velocity, this value is modified by the function every time you call it.</param>
         /// <param name="smoothTime">Approximately the time it will take to reach the target. A smaller value will reach the target faster.</param>
-        /// <param name="maxSpeed">Optionally allows you to clamp the maximum speed.</param>
+        /// <param name="maxSpeed">Optionally allows the maximum speed to be clamped.</param>
         /// <returns>The smoothed quaternion.</returns>
         public static Quaternion SmoothDamp(this Quaternion current, Quaternion target, ref Quaternion currentVelocity, float smoothTime, float maxSpeed = Mathf.Infinity)
         {

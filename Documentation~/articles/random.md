@@ -1,10 +1,10 @@
 ---
-slug: "/manual/chance"
+slug: "/manual/random"
 ---
 
-# Random Chance
+# Random
 
-The **Math Utils** package contains several functions for generating random chance values, including rolling dice, picking random playing cards, and other utility functions.
+The **Math Utils** package contains several functions for generating random values, including rolling dice, picking random playing cards, and other utility functions.
 
 <hr/>
 
