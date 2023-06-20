@@ -66,120 +66,150 @@ namespace Zigurous.Math
         /// </summary>
         /// <param name="transform">The transform to set the position of.</param>
         /// <param name="x">The x-axis position to set.</param>
-        public static void SetPositionX(this Transform transform, float x) =>
+        public static void SetPositionX(this Transform transform, float x)
+        {
             transform.position = new Vector3(x, transform.position.y, transform.position.z);
+        }
 
         /// <summary>
         /// Sets the position of the transform in the y-axis.
         /// </summary>
         /// <param name="transform">The transform to set the position of.</param>
         /// <param name="y">The y-axis position to set.</param>
-        public static void SetPositionY(this Transform transform, float y) =>
+        public static void SetPositionY(this Transform transform, float y)
+        {
             transform.position = new Vector3(transform.position.x, y, transform.position.z);
+        }
 
         /// <summary>
         /// Sets the position of the transform in the z-axis.
         /// </summary>
         /// <param name="transform">The transform to set the position of.</param>
         /// <param name="z">The z-axis position to set.</param>
-        public static void SetPositionZ(this Transform transform, float z) =>
+        public static void SetPositionZ(this Transform transform, float z)
+        {
             transform.position = new Vector3(transform.position.x, transform.position.y, z);
+        }
 
         /// <summary>
         /// Sets the local position of the transform in the x-axis.
         /// </summary>
         /// <param name="transform">The transform to set the local position of.</param>
         /// <param name="x">The x-axis position to set.</param>
-        public static void SetLocalPositionX(this Transform transform, float x) =>
+        public static void SetLocalPositionX(this Transform transform, float x)
+        {
             transform.localPosition = new Vector3(x, transform.localPosition.y, transform.localPosition.z);
+        }
 
         /// <summary>
         /// Sets the local position of the transform in the y-axis.
         /// </summary>
         /// <param name="transform">The transform to set the local position of.</param>
         /// <param name="y">The y-axis position to set.</param>
-        public static void SetLocalPositionY(this Transform transform, float y) =>
+        public static void SetLocalPositionY(this Transform transform, float y)
+        {
             transform.localPosition = new Vector3(transform.localPosition.x, y, transform.localPosition.z);
+        }
 
         /// <summary>
         /// Sets the local position of the transform in the z-axis.
         /// </summary>
         /// <param name="transform">The transform to set the local position of.</param>
         /// <param name="z">The z-axis position to set.</param>
-        public static void SetLocalPositionZ(this Transform transform, float z) =>
+        public static void SetLocalPositionZ(this Transform transform, float z)
+        {
             transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, z);
+        }
 
         /// <summary>
         /// Sets the euler angles of the transform in the x-axis.
         /// </summary>
         /// <param name="transform">The transform to set the euler angles of.</param>
         /// <param name="x">The x-axis euler angle to set.</param>
-        public static void SetEulerX(this Transform transform, float x) =>
+        public static void SetEulerAnglesX(this Transform transform, float x)
+        {
             transform.eulerAngles = new Vector3(x, transform.eulerAngles.y, transform.eulerAngles.z);
+        }
 
         /// <summary>
         /// Sets the euler angles of the transform in the y-axis.
         /// </summary>
         /// <param name="transform">The transform to set the euler angles of.</param>
         /// <param name="y">The y-axis euler angle to set.</param>
-        public static void SetEulerY(this Transform transform, float y) =>
+        public static void SetEulerAnglesY(this Transform transform, float y)
+        {
             transform.eulerAngles = new Vector3(transform.eulerAngles.x, y, transform.eulerAngles.z);
+        }
 
         /// <summary>
         /// Sets the euler angles of the transform in the z-axis.
         /// </summary>
         /// <param name="transform">The transform to set the euler angles of.</param>
         /// <param name="z">The z-axis euler angle to set.</param>
-        public static void SetEulerZ(this Transform transform, float z) =>
+        public static void SetEulerAnglesZ(this Transform transform, float z)
+        {
             transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, z);
+        }
 
         /// <summary>
         /// Sets the local euler angles of the transform in the x-axis.
         /// </summary>
         /// <param name="transform">The transform to set the local euler angles of.</param>
         /// <param name="x">The x-axis euler angle to set.</param>
-        public static void SetLocalEulerX(this Transform transform, float x) =>
+        public static void SetLocalEulerAnglesX(this Transform transform, float x)
+        {
             transform.localEulerAngles = new Vector3(x, transform.localEulerAngles.y, transform.localEulerAngles.z);
+        }
 
         /// <summary>
         /// Sets the local euler angles of the transform in the y-axis.
         /// </summary>
         /// <param name="transform">The transform to set the local euler angles of.</param>
         /// <param name="y">The y-axis euler angle to set.</param>
-        public static void SetLocalEulerY(this Transform transform, float y) =>
+        public static void SetLocalEulerAnglesY(this Transform transform, float y)
+        {
             transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, y, transform.localEulerAngles.z);
+        }
 
         /// <summary>
         /// Sets the local euler angles of the transform in the z-axis.
         /// </summary>
         /// <param name="transform">The transform to set the local euler angles of.</param>
         /// <param name="z">The z-axis euler angle to set.</param>
-        public static void SetLocalEulerZ(this Transform transform, float z) =>
+        public static void SetLocalEulerAnglesZ(this Transform transform, float z)
+        {
             transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, z);
+        }
 
         /// <summary>
         /// Sets the scale of the transform in the x-axis.
         /// </summary>
         /// <param name="transform">The transform to set the scale of.</param>
         /// <param name="x">The x-axis scale to set.</param>
-        public static void SetScaleX(this Transform transform, float x) =>
+        public static void SetLocalScaleX(this Transform transform, float x)
+        {
             transform.localScale = new Vector3(x, transform.localScale.y, transform.localScale.z);
+        }
 
         /// <summary>
         /// Sets the scale of the transform in the y-axis.
         /// </summary>
         /// <param name="transform">The transform to set the scale of.</param>
         /// <param name="y">The y-axis scale to set.</param>
-        public static void SetScaleY(this Transform transform, float y) =>
+        public static void SetLocalScaleY(this Transform transform, float y)
+        {
             transform.localScale = new Vector3(transform.localScale.x, y, transform.localScale.z);
+        }
 
         /// <summary>
         /// Sets the scale of the transform in the z-axis.
         /// </summary>
         /// <param name="transform">The transform to set the scale of.</param>
         /// <param name="z">The z-axis scale to set.</param>
-        public static void SetScaleZ(this Transform transform, float z) =>
+        public static void SetLocalScaleZ(this Transform transform, float z)
+        {
             transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, z);
+        }
 
     }
 
