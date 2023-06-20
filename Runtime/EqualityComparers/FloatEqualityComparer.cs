@@ -14,7 +14,8 @@ namespace Zigurous.Math
         public int digits;
 
         /// <summary>
-        /// Creates a new FloatEqualityComparer.
+        /// Creates a new FloatEqualityComparer with a default of 3 decimal
+        /// digits to compare when determining equality.
         /// </summary>
         public FloatEqualityComparer()
         {
