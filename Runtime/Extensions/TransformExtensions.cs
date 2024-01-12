@@ -30,7 +30,7 @@ namespace Zigurous.Math
         /// <returns>The center position of the transform's children.</returns>
         public static Vector3 CenterPositionOfChildren(this Transform transform)
         {
-            Bounds bounds = new Bounds();
+            Bounds bounds = new();
 
             foreach (Transform child in transform) {
                 bounds.Encapsulate(child.position);
@@ -45,8 +45,7 @@ namespace Zigurous.Math
         /// <param name="transform">The transform to reset.</param>
         public static void Reset(this Transform transform)
         {
-            transform.position = Vector3.zero;
-            transform.rotation = Quaternion.identity;
+            transform.SetPositionAndRotation(Vector3.zero, Quaternion.identity);
             transform.localScale = Vector3.one;
         }
 
@@ -56,8 +55,7 @@ namespace Zigurous.Math
         /// <param name="transform">The transform to reset.</param>
         public static void ResetLocal(this Transform transform)
         {
-            transform.localPosition = Vector3.zero;
-            transform.localRotation = Quaternion.identity;
+            transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
             transform.localScale = Vector3.one;
         }
 

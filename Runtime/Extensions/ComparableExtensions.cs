@@ -91,7 +91,7 @@ namespace Zigurous.Math
         public static T Max<T>(this T[] values) where T : IComparable<T>
         {
             if (values == null || values.Length == 0) {
-                return default(T);
+                return default;
             }
 
             T max = values[0];
@@ -117,7 +117,7 @@ namespace Zigurous.Math
         public static T Max<T>(this List<T> values) where T : IComparable<T>
         {
             if (values == null || values.Count == 0) {
-                return default(T);
+                return default;
             }
 
             T max = values[0];
@@ -143,7 +143,7 @@ namespace Zigurous.Math
         public static T Min<T>(this T[] values) where T : IComparable<T>
         {
             if (values == null || values.Length == 0) {
-                return default(T);
+                return default;
             }
 
             T min = values[0];
@@ -169,7 +169,7 @@ namespace Zigurous.Math
         public static T Min<T>(this List<T> values) where T : IComparable<T>
         {
             if (values == null || values.Count == 0) {
-                return default(T);
+                return default;
             }
 
             T min = values[0];

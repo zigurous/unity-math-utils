@@ -11,22 +11,22 @@ namespace Zigurous.Math
         /// <summary>
         /// An abbreviation for numbers in the thousands (Read only).
         /// </summary>
-        public static NumberAbbreviation thousands => new NumberAbbreviation(1_000, "0K");
+        public static NumberAbbreviation thousands => new(1_000, "0K");
 
         /// <summary>
         /// An abbreviation for numbers in the millions (Read only).
         /// </summary>
-        public static NumberAbbreviation millions => new NumberAbbreviation(1_000_000, "0M");
+        public static NumberAbbreviation millions => new(1_000_000, "0M");
 
         /// <summary>
         /// An abbreviation for numbers in the billions (Read only).
         /// </summary>
-        public static NumberAbbreviation billions => new NumberAbbreviation(1_000_000_000, "0B");
+        public static NumberAbbreviation billions => new(1_000_000_000, "0B");
 
         /// <summary>
         /// An abbreviation for numbers in the trillions (Read only).
         /// </summary>
-        public static NumberAbbreviation trillions => new NumberAbbreviation(1_000_000_000_000, "0T");
+        public static NumberAbbreviation trillions => new(1_000_000_000_000, "0T");
 
         /// <summary>
         /// A predefined set of common number abbreviations (Read only).
@@ -66,7 +66,7 @@ namespace Zigurous.Math
         /// </summary>
         /// <param name="number">The number to abbreviate.</param>
         /// <returns>The number abbreviated as a string.</returns>
-        public string Format(double number)
+        public readonly string Format(double number)
         {
             return (number / factor).ToString(format);
         }

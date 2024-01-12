@@ -19,7 +19,7 @@ namespace Zigurous.Math
         /// </summary>
         public FloatEqualityComparer()
         {
-            this.digits = 3;
+            digits = 3;
         }
 
         /// <summary>

@@ -269,7 +269,7 @@
                 min = max;
             }
 
-            return default(T);
+            return default;
         }
 
     }

@@ -52,16 +52,16 @@
         public static bool Compare<T>(this ComparisonSign sign, T a, T b)
             where T : System.IComparable<T>
         {
-            switch (sign)
+            return sign switch
             {
-                case ComparisonSign.Equal: return a.CompareTo(b) == 0;
-                case ComparisonSign.NotEqual: return a.CompareTo(b) != 0;
-                case ComparisonSign.GreaterThan: return a.CompareTo(b) > 0;
-                case ComparisonSign.GreaterThanOrEqual: return a.CompareTo(b) >= 0;
-                case ComparisonSign.LessThan: return a.CompareTo(b) < 0;
-                case ComparisonSign.LessThanOrEqual: return a.CompareTo(b) <= 0;
-                default: return false;
-            }
+                ComparisonSign.Equal => a.CompareTo(b) == 0,
+                ComparisonSign.NotEqual => a.CompareTo(b) != 0,
+                ComparisonSign.GreaterThan => a.CompareTo(b) > 0,
+                ComparisonSign.GreaterThanOrEqual => a.CompareTo(b) >= 0,
+                ComparisonSign.LessThan => a.CompareTo(b) < 0,
+                ComparisonSign.LessThanOrEqual => a.CompareTo(b) <= 0,
+                _ => false,
+            };
         }
 
     }

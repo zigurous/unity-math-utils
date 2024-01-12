@@ -51,10 +51,11 @@ namespace Zigurous.Math
         /// <returns>The position as a result of the interpolation.</returns>
         public static Vector2 Lerp(this Rect rect, Vector2 t)
         {
-            Vector2 position = new Vector2();
-            position.x = Mathf.Lerp(rect.min.x, rect.max.x, t.x);
-            position.y = Mathf.Lerp(rect.min.y, rect.max.y, t.y);
-            return position;
+            return new Vector2
+            {
+                x = Mathf.Lerp(rect.min.x, rect.max.x, t.x),
+                y = Mathf.Lerp(rect.min.y, rect.max.y, t.y)
+            };
         }
 
         /// <summary>
@@ -66,10 +67,11 @@ namespace Zigurous.Math
         /// <returns>The position as a result of the interpolation.</returns>
         public static Vector2 LerpUnclamped(this Rect rect, Vector2 t)
         {
-            Vector2 position = new Vector2();
-            position.x = Mathf.LerpUnclamped(rect.min.x, rect.max.x, t.x);
-            position.y = Mathf.LerpUnclamped(rect.min.y, rect.max.y, t.y);
-            return position;
+            return new Vector2
+            {
+                x = Mathf.LerpUnclamped(rect.min.x, rect.max.x, t.x),
+                y = Mathf.LerpUnclamped(rect.min.y, rect.max.y, t.y)
+            };
         }
 
         /// <summary>
@@ -81,10 +83,11 @@ namespace Zigurous.Math
         /// <returns>The linear parameter <c>t</c> where each axis falls in the range [0..1].</returns>
         public static Vector2 InverseLerp(this Rect rect, Vector2 position)
         {
-            Vector2 t = new Vector2();
-            t.x = Mathf.InverseLerp(rect.min.x, rect.max.x, position.x);
-            t.y = Mathf.InverseLerp(rect.min.y, rect.max.y, position.y);
-            return t;
+            return new Vector2
+            {
+                x = Mathf.InverseLerp(rect.min.x, rect.max.x, position.x),
+                y = Mathf.InverseLerp(rect.min.y, rect.max.y, position.y)
+            };
         }
 
     }
