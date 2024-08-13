@@ -3,7 +3,7 @@
   "version": "1.2.0",
   "displayName": "Math Utils",
   "description": "The Math Utils package provides extensions and utilities for working with numbers in Unity projects including processing inputs, generating random numbers, and much more.",
-  "unity": "2019.4",
+  "unity": "2022.3",
   "repository": "https://github.com/zigurous/unity-math-utils",
   "documentationUrl": "https://docs.zigurous.com/com.zigurous.math",
   "changelogUrl": "https://docs.zigurous.com/com.zigurous.math/changelog",
