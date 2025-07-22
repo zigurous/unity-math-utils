@@ -9,6 +9,11 @@ namespace Zigurous.Math
     public sealed class DoubleEqualityComparer : IEqualityComparer<double>
     {
         /// <summary>
+        /// The default equality comparer which compares 3 decimal digits.
+        /// </summary>
+        public static readonly DoubleEqualityComparer Default = new(3);
+
+        /// <summary>
         /// The number of decimal digits to compare when determining equality.
         /// </summary>
         public int digits;
