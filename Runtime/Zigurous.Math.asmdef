@@ -1,5 +1,6 @@
 {
     "name": "Zigurous.Math",
+    "rootNamespace": "",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
