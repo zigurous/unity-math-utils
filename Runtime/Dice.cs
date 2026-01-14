@@ -1,4 +1,6 @@
-﻿namespace Zigurous.Math
+﻿using UnityEngine;
+
+namespace Zigurous.Math
 {
     /// <summary>
     /// Functions for rolling dice.
@@ -6,19 +8,78 @@
     public static class Dice
     {
         /// <summary>
+        /// A function that rolls dice to produce an integer result.
+        /// </summary>
+        /// <returns>The result of the dice roll.</returns>
+        public delegate int DiceRollFunction();
+
+        /// <summary>
+        /// A function that rolls dice <paramref name="n"/> times to produce an
+        /// integer result.
+        /// </summary>
+        /// <param name="n">The number of times to roll the dice.</param>
+        /// <returns>The sum of the dice rolls.</returns>
+        public delegate int NDiceRollFunction(int n);
+
+        /// <summary>
+        /// Rolls dice to produce an integer result.
+        /// </summary>
+        /// <param name="dice">The dice roll function to use.</param>
+        /// <param name="flags">Optional flags to use when rolling the dice.</param>
+        /// <returns>The result of the dice roll.</returns>
+        public static int Roll(DiceRollFunction dice, DiceRollFlag flags = DiceRollFlag.None)
+        {
+            bool advantage = flags.Has(DiceRollFlag.Advantage);
+            bool disadvantage = flags.Has(DiceRollFlag.Disadvantage);
+
+            if (advantage && disadvantage) {
+                return dice(); // advantage and disadvantage cancel out
+            } else if (advantage) {
+                return Mathf.Max(dice(), dice());
+            } else if (disadvantage) {
+                return Mathf.Min(dice(), dice());
+            } else {
+                return dice();
+            }
+        }
+
+        /// <summary>
+        /// Rolls dice <paramref name="n"/> times to produce an integer result.
+        /// </summary>
+        /// <param name="dice">The dice roll function to use.</param>
+        /// <param name="n">The number of times to roll the dice.</param>
+        /// <param name="flags">Optional flags to use when rolling the dice.</param>
+        /// <returns>The sum of the dice rolls.</returns>
+        public static int Roll(NDiceRollFunction dice, int n, DiceRollFlag flags = DiceRollFlag.None)
+        {
+            bool advantage = flags.Has(DiceRollFlag.Advantage);
+            bool disadvantage = flags.Has(DiceRollFlag.Disadvantage);
+
+            if (advantage && disadvantage) {
+                return dice(n); // advantage and disadvantage cancel out
+            } else if (advantage) {
+                return Mathf.Max(dice(n), dice(n));
+            } else if (disadvantage) {
+                return Mathf.Min(dice(n), dice(n));
+            } else {
+                return dice(n);
+            }
+        }
+
+        /// <summary>
         /// Rolls a 4-sided dice [1..4].
         /// </summary>
         /// <returns>A random number on a 4-sided dice [1..4].</returns>
         public static int D4()
         {
-            return UnityEngine.Random.Range(1, 5);
+            return Random.Range(1, 5);
         }
 
         /// <summary>
         /// Rolls a 4-sided dice [1..4] <paramref name="n"/> times.
         /// </summary>
         /// <param name="n">The number of times to roll the dice.</param>
-        /// <returns>The sum of the rolls.</returns>
+        /// <returns>The sum of the dice rolls.</returns>
         public static int D4(int n)
         {
             int roll = 0;
@@ -32,14 +93,14 @@
         /// <returns>A random number on a 6-sided dice [1..6].</returns>
         public static int D6()
         {
-            return UnityEngine.Random.Range(1, 7);
+            return Random.Range(1, 7);
         }
 
         /// <summary>
         /// Rolls a 6-sided dice [1..6] <paramref name="n"/> times.
         /// </summary>
         /// <param name="n">The number of times to roll the dice.</param>
-        /// <returns>The sum of the rolls.</returns>
+        /// <returns>The sum of the dice rolls.</returns>
         public static int D6(int n)
         {
             int roll = 0;
@@ -53,14 +114,14 @@
         /// <returns>A random number on an 8-sided dice [1..8].</returns>
         public static int D8()
         {
-            return UnityEngine.Random.Range(1, 9);
+            return Random.Range(1, 9);
         }
 
         /// <summary>
         /// Rolls an 8-sided dice [1..8] <paramref name="n"/> times.
         /// </summary>
         /// <param name="n">The number of times to roll the dice.</param>
-        /// <returns>The sum of the rolls.</returns>
+        /// <returns>The sum of the dice rolls.</returns>
         public static int D8(int n)
         {
             int roll = 0;
@@ -74,14 +135,14 @@
         /// <returns>A random number on a 10-sided dice [1..10].</returns>
         public static int D10()
         {
-            return UnityEngine.Random.Range(1, 11);
+            return Random.Range(1, 11);
         }
 
         /// <summary>
         /// Rolls a 10-sided dice [1..10] <paramref name="n"/> times.
         /// </summary>
         /// <param name="n">The number of times to roll the dice.</param>
-        /// <returns>The sum of the rolls.</returns>
+        /// <returns>The sum of the dice rolls.</returns>
         public static int D10(int n)
         {
             int roll = 0;
@@ -95,14 +156,14 @@
         /// <returns>A random number on a 12-sided dice [1..12].</returns>
         public static int D12()
         {
-            return UnityEngine.Random.Range(1, 13);
+            return Random.Range(1, 13);
         }
 
         /// <summary>
         /// Rolls a 12-sided dice [1..12] <paramref name="n"/> times.
         /// </summary>
         /// <param name="n">The number of times to roll the dice.</param>
-        /// <returns>The sum of the rolls.</returns>
+        /// <returns>The sum of the dice rolls.</returns>
         public static int D12(int n)
         {
             int roll = 0;
@@ -116,14 +177,14 @@
         /// <returns>A random number on a 20-sided dice [1..20].</returns>
         public static int D20()
         {
-            return UnityEngine.Random.Range(1, 21);
+            return Random.Range(1, 21);
         }
 
         /// <summary>
         /// Rolls a 20-sided dice [1..20] <paramref name="n"/> times.
         /// </summary>
         /// <param name="n">The number of times to roll the dice.</param>
-        /// <returns>The sum of the rolls.</returns>
+        /// <returns>The sum of the dice rolls.</returns>
         public static int D20(int n)
         {
             int roll = 0;
@@ -137,14 +198,14 @@
         /// <returns>A random number on a 100-sided dice [1..100].</returns>
         public static int D100()
         {
-            return UnityEngine.Random.Range(1, 101);
+            return Random.Range(1, 101);
         }
 
         /// <summary>
         /// Rolls a 100-sided dice [1..100] <paramref name="n"/> times.
         /// </summary>
         /// <param name="n">The number of times to roll the dice.</param>
-        /// <returns>The sum of the rolls.</returns>
+        /// <returns>The sum of the dice rolls.</returns>
         public static int D100(int n)
         {
             int roll = 0;
@@ -159,7 +220,7 @@
         /// <returns>A random number on an n-sided dice [1..<paramref name="n"/>].</returns>
         public static int NSided(int n)
         {
-            return UnityEngine.Random.Range(1, n + 1);
+            return Random.Range(1, n + 1);
         }
 
         /// <summary>
@@ -167,7 +228,7 @@
         /// </summary>
         /// <param name="n">The number of sides on the dice.</param>
         /// <param name="x">The number of times to roll the dice.</param>
-        /// <returns>The sum of the rolls.</returns>
+        /// <returns>The sum of the dice rolls.</returns>
         public static int NSided(int n, int x)
         {
             int roll = 0;
@@ -182,7 +243,7 @@
         /// <returns>A random number on the dice.</returns>
         public static int Roll(int[] dice)
         {
-            return dice[UnityEngine.Random.Range(0, dice.Length)];
+            return dice[Random.Range(0, dice.Length)];
         }
 
         /// <summary>
@@ -190,7 +251,7 @@
         /// </summary>
         /// <param name="dice">The numbered sides of the dice.</param>
         /// <param name="n">The number of times to roll the dice.</param>
-        /// <returns>The sum of the rolls.</returns>
+        /// <returns>The sum of the dice rolls.</returns>
         public static int Roll(int[] dice, int n)
         {
             int roll = 0;
@@ -206,7 +267,7 @@
         /// <returns>A random value on the dice.</returns>
         public static T Roll<T>(T[] dice)
         {
-            return dice[UnityEngine.Random.Range(0, dice.Length)];
+            return dice[Random.Range(0, dice.Length)];
         }
 
         /// <summary>
@@ -224,7 +285,7 @@
                 weightedTotal += weights[i];
             }
 
-            float roll = UnityEngine.Random.value;
+            float roll = Random.value;
             float min = 0f;
 
             for (int i = 0; i < weights.Length; i++)
@@ -249,6 +310,49 @@
             }
 
             return default;
+        }
+
+    }
+
+    /// <summary>
+    /// A special flag that changes how the dice are rolled.
+    /// </summary>
+    [System.Flags]
+    public enum DiceRollFlag
+    {
+        /// <summary>
+        /// No special flags.
+        /// </summary>
+        [Tooltip("No special flags.")]
+        None = 0,
+
+        /// <summary>
+        /// Rolls the dice twice and takes the higher result.
+        /// </summary>
+        [Tooltip("Rolls the dice twice and takes the higher result.")]
+        Advantage = 1 << 0,
+
+        /// <summary>
+        /// Rolls the dice twice and takes the lower result.
+        /// </summary>
+        [Tooltip("Rolls the dice twice and takes the lower result.")]
+        Disadvantage = 1 << 1,
+    }
+
+    /// <summary>
+    /// Extension methods for <see cref="DiceRollFlag"/>.
+    /// </summary>
+    public static class DiceRollFlagExtensions
+    {
+        /// <summary>
+        /// Checks if the flags has a specified flag.
+        /// </summary>
+        /// <param name="flags">The flags to check.</param>
+        /// <param name="flag">The other flag to check for.</param>
+        /// <returns>True if the flags has the specified flag, false otherwise.</returns>
+        public static bool Has(this DiceRollFlag flags, DiceRollFlag flag)
+        {
+            return ((int)flags & (int)flag) == (int)flag;
         }
 
     }
