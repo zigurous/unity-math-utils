@@ -132,27 +132,6 @@
         }
 
         /// <summary>
-        /// Rolls a 48-sided dice [1..48].
-        /// </summary>
-        /// <returns>A random number on a 48-sided dice [1..48].</returns>
-        public static int D48()
-        {
-            return UnityEngine.Random.Range(1, 49);
-        }
-
-        /// <summary>
-        /// Rolls a 48-sided dice [1..48] <paramref name="n"/> times.
-        /// </summary>
-        /// <param name="n">The number of times to roll the dice.</param>
-        /// <returns>The sum of the rolls.</returns>
-        public static int D48(int n)
-        {
-            int roll = 0;
-            while (n-- > 0) roll += D48();
-            return roll;
-        }
-
-        /// <summary>
         /// Rolls a 100-sided dice [1..100].
         /// </summary>
         /// <returns>A random number on a 100-sided dice [1..100].</returns>
