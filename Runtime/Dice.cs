@@ -14,18 +14,10 @@ namespace Zigurous.Math
         public delegate int DiceRollFunction();
 
         /// <summary>
-        /// A function that rolls dice <paramref name="n"/> times to produce an
-        /// integer result.
-        /// </summary>
-        /// <param name="n">The number of times to roll the dice.</param>
-        /// <returns>The sum of the dice rolls.</returns>
-        public delegate int NDiceRollFunction(int n);
-
-        /// <summary>
         /// Rolls dice to produce an integer result.
         /// </summary>
         /// <param name="dice">The dice roll function to use.</param>
-        /// <param name="flags">Optional flags to use when rolling the dice.</param>
+        /// <param name="flags">The optional flags to use when rolling the dice, such as advantage or disadvantage.</param>
         /// <returns>The result of the dice roll.</returns>
         public static int Roll(DiceRollFunction dice, DiceRollFlag flags = DiceRollFlag.None)
         {
@@ -44,26 +36,16 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Rolls dice <paramref name="n"/> times to produce an integer result.
+        /// Rolls dice <paramref name="n"/> times and returns the sum of the rolls.
         /// </summary>
         /// <param name="dice">The dice roll function to use.</param>
         /// <param name="n">The number of times to roll the dice.</param>
-        /// <param name="flags">Optional flags to use when rolling the dice.</param>
         /// <returns>The sum of the dice rolls.</returns>
-        public static int Roll(NDiceRollFunction dice, int n, DiceRollFlag flags = DiceRollFlag.None)
+        public static int Roll(DiceRollFunction dice, int n)
         {
-            bool advantage = flags.Has(DiceRollFlag.Advantage);
-            bool disadvantage = flags.Has(DiceRollFlag.Disadvantage);
-
-            if (advantage && disadvantage) {
-                return dice(n); // advantage and disadvantage cancel out
-            } else if (advantage) {
-                return Mathf.Max(dice(n), dice(n));
-            } else if (disadvantage) {
-                return Mathf.Min(dice(n), dice(n));
-            } else {
-                return dice(n);
-            }
+            int roll = 0;
+            while (n-- > 0) roll += dice();
+            return roll;
         }
 
         /// <summary>
@@ -76,7 +58,8 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Rolls a 4-sided dice [1..4] <paramref name="n"/> times.
+        /// Rolls a 4-sided dice [1..4] <paramref name="n"/> times and
+        /// returns the sum of the rolls.
         /// </summary>
         /// <param name="n">The number of times to roll the dice.</param>
         /// <returns>The sum of the dice rolls.</returns>
@@ -97,7 +80,8 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Rolls a 6-sided dice [1..6] <paramref name="n"/> times.
+        /// Rolls a 6-sided dice [1..6] <paramref name="n"/> times and
+        /// returns the sum of the rolls.
         /// </summary>
         /// <param name="n">The number of times to roll the dice.</param>
         /// <returns>The sum of the dice rolls.</returns>
@@ -118,7 +102,8 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Rolls an 8-sided dice [1..8] <paramref name="n"/> times.
+        /// Rolls an 8-sided dice [1..8] <paramref name="n"/> times and
+        /// returns the sum of the rolls.
         /// </summary>
         /// <param name="n">The number of times to roll the dice.</param>
         /// <returns>The sum of the dice rolls.</returns>
@@ -139,7 +124,8 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Rolls a 10-sided dice [1..10] <paramref name="n"/> times.
+        /// Rolls a 10-sided dice [1..10] <paramref name="n"/> times and
+        /// returns the sum of the rolls.
         /// </summary>
         /// <param name="n">The number of times to roll the dice.</param>
         /// <returns>The sum of the dice rolls.</returns>
@@ -160,7 +146,8 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Rolls a 12-sided dice [1..12] <paramref name="n"/> times.
+        /// Rolls a 12-sided dice [1..12] <paramref name="n"/> times and
+        /// returns the sum of the rolls.
         /// </summary>
         /// <param name="n">The number of times to roll the dice.</param>
         /// <returns>The sum of the dice rolls.</returns>
@@ -181,7 +168,8 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Rolls a 20-sided dice [1..20] <paramref name="n"/> times.
+        /// Rolls a 20-sided dice [1..20] <paramref name="n"/> times and
+        /// returns the sum of the rolls.
         /// </summary>
         /// <param name="n">The number of times to roll the dice.</param>
         /// <returns>The sum of the dice rolls.</returns>
@@ -202,7 +190,8 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Rolls a 100-sided dice [1..100] <paramref name="n"/> times.
+        /// Rolls a 100-sided dice [1..100] <paramref name="n"/> times and
+        /// returns the sum of the rolls.
         /// </summary>
         /// <param name="n">The number of times to roll the dice.</param>
         /// <returns>The sum of the dice rolls.</returns>
@@ -224,7 +213,8 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Rolls an n-sided dice [1..<paramref name="n"/>] <paramref name="x"/> amount of times.
+        /// Rolls an n-sided dice [1..<paramref name="n"/>] <paramref name="x"/>
+        /// times and returns the sum of the rolls.
         /// </summary>
         /// <param name="n">The number of sides on the dice.</param>
         /// <param name="x">The number of times to roll the dice.</param>
@@ -247,7 +237,8 @@ namespace Zigurous.Math
         }
 
         /// <summary>
-        /// Rolls a custom dice <paramref name="n"/> amount of times.
+        /// Rolls a custom dice <paramref name="n"/> times and returns the sum
+        /// of the rolls.
         /// </summary>
         /// <param name="dice">The numbered sides of the dice.</param>
         /// <param name="n">The number of times to roll the dice.</param>
