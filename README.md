@@ -2,7 +2,7 @@
 
 [![](https://img.shields.io/badge/github-repo-blue?logo=github)](https://github.com/zigurous/unity-math-utils) [![](https://img.shields.io/github/package-json/v/zigurous/unity-math-utils)](https://github.com/zigurous/unity-math-utils/releases) [![](https://img.shields.io/badge/docs-link-success)](https://docs.zigurous.com/com.zigurous.math) [![](https://img.shields.io/github/license/zigurous/unity-math-utils)](https://github.com/zigurous/unity-math-utils/blob/main/LICENSE.md)
 
-The **Math Utils** package provides extensions and utilities for working with numbers in Unity projects including processing inputs, generating random numbers, and much more.
+A utility library for working with numbers in Unity projects. Includes utilities for random number generation, functions for processing input values, data structures for custom math formulas, extension methods for common Unity structs, and much more.
 
 ## Reference
 
