@@ -86,6 +86,61 @@
             return UnityEngine.Random.value < 0.5f ? Coin.Heads : Coin.Tails;
         }
 
+        /// <summary>
+        /// Returns a random value from a list of weighted values.
+        /// </summary>
+        /// <typeparam name="T">The type of weighted value.</typeparam>
+        /// <param name="values">The weighted values to roll from.</param>
+        /// <returns>A random weighted value.</returns>
+        public static T WeightedRoll<T>(T[] values) where T : IWeightedChance
+        {
+            int len = values.Length;
+            float weightedTotal = 0f;
+
+            for (int i = 0; i < len; i++) {
+                weightedTotal += values[i].Weight;
+            }
+
+            float roll = UnityEngine.Random.value;
+            float min = 0f;
+
+            for (int i = 0; i < len; i++)
+            {
+                int weight = values[i].Weight;
+                if (weight <= 0) continue;
+
+                float max = min + (weight / weightedTotal);
+
+                if (i == len - 1)
+                {
+                    if (roll >= min && roll <= max) {
+                        return values[i];
+                    }
+                }
+                else
+                {
+                    if (roll >= min && roll < max) {
+                        return values[i];
+                    }
+                }
+
+                min = max;
+            }
+
+            return default;
+        }
+
+    }
+
+    /// <summary>
+    /// A type that has a weighted chance of being rolled.
+    /// </summary>
+    public interface IWeightedChance
+    {
+        /// <summary>
+        /// The weighted chance of being rolled.
+        /// </summary>
+        public int Weight { get; }
     }
 
 }
