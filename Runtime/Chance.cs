@@ -98,7 +98,7 @@
             float weightedTotal = 0f;
 
             for (int i = 0; i < len; i++) {
-                weightedTotal += values[i].Weight;
+                weightedTotal += values[i].WeightedChance;
             }
 
             float roll = UnityEngine.Random.value;
@@ -106,7 +106,7 @@
 
             for (int i = 0; i < len; i++)
             {
-                int weight = values[i].Weight;
+                int weight = values[i].WeightedChance;
                 if (weight <= 0) continue;
 
                 float max = min + (weight / weightedTotal);
@@ -140,7 +140,7 @@
         /// <summary>
         /// The weighted chance of being rolled.
         /// </summary>
-        public int Weight { get; }
+        public int WeightedChance { get; }
     }
 
 }
