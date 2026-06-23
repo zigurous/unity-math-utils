@@ -1,4 +1,6 @@
-﻿namespace Zigurous.Math
+﻿using System.Collections.Generic;
+
+namespace Zigurous.Math
 {
     /// <summary>
     /// Functions for generating random chance values.
@@ -95,6 +97,40 @@
         public static T WeightedRoll<T>(T[] values) where T : IWeightedChance
         {
             int len = values.Length;
+            int weightedTotal = 0;
+
+            for (int i = 0; i < len; i++) {
+                weightedTotal += values[i].WeightedChance;
+            }
+
+            int roll = UnityEngine.Random.Range(0, weightedTotal);
+            int min = 0;
+
+            for (int i = 0; i < len; i++)
+            {
+                int weight = values[i].WeightedChance;
+                if (weight <= 0) continue;
+
+                int max = min + weight;
+                if (roll >= min && roll < max) {
+                    return values[i];
+                } else {
+                    min = max;
+                }
+            }
+
+            return default;
+        }
+
+        /// <summary>
+        /// Returns a random value from a list of weighted values.
+        /// </summary>
+        /// <typeparam name="T">The type of weighted value.</typeparam>
+        /// <param name="values">The weighted values to roll from.</param>
+        /// <returns>A random weighted value.</returns>
+        public static T WeightedRoll<T>(List<T> values) where T : IWeightedChance
+        {
+            int len = values.Count;
             int weightedTotal = 0;
 
             for (int i = 0; i < len; i++) {
