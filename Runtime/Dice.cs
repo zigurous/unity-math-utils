@@ -271,36 +271,26 @@ namespace Zigurous.Math
         public static T Roll<T>(T[] dice, int[] weights)
         {
             int len = weights.Length;
-            float weightedTotal = 0f;
+            int weightedTotal = 0;
 
             for (int i = 0; i < len; i++) {
                 weightedTotal += weights[i];
             }
 
-            float roll = Random.value;
-            float min = 0f;
+            int roll = Random.Range(0, weightedTotal);
+            int min = 0;
 
             for (int i = 0; i < len; i++)
             {
                 int weight = weights[i];
                 if (weight <= 0) continue;
 
-                float max = min + (weight / weightedTotal);
-
-                if (i == len - 1)
-                {
-                    if (roll >= min && roll <= max) {
-                        return dice[i];
-                    }
+                int max = min + weight;
+                if (roll >= min && roll < max) {
+                    return dice[i];
+                } else {
+                    min = max;
                 }
-                else
-                {
-                    if (roll >= min && roll < max) {
-                        return dice[i];
-                    }
-                }
-
-                min = max;
             }
 
             return default;

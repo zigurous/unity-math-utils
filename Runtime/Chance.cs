@@ -95,36 +95,26 @@
         public static T WeightedRoll<T>(T[] values) where T : IWeightedChance
         {
             int len = values.Length;
-            float weightedTotal = 0f;
+            int weightedTotal = 0;
 
             for (int i = 0; i < len; i++) {
                 weightedTotal += values[i].WeightedChance;
             }
 
-            float roll = UnityEngine.Random.value;
-            float min = 0f;
+            int roll = UnityEngine.Random.Range(0, weightedTotal);
+            int min = 0;
 
             for (int i = 0; i < len; i++)
             {
                 int weight = values[i].WeightedChance;
                 if (weight <= 0) continue;
 
-                float max = min + (weight / weightedTotal);
-
-                if (i == len - 1)
-                {
-                    if (roll >= min && roll <= max) {
-                        return values[i];
-                    }
+                int max = min + weight;
+                if (roll >= min && roll < max) {
+                    return values[i];
+                } else {
+                    min = max;
                 }
-                else
-                {
-                    if (roll >= min && roll < max) {
-                        return values[i];
-                    }
-                }
-
-                min = max;
             }
 
             return default;
