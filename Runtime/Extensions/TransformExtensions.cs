@@ -90,7 +90,9 @@ namespace Zigurous.Math
         /// <param name="x">The x-axis position to set.</param>
         public static void SetPositionX(this Transform transform, float x)
         {
-            transform.position = new Vector3(x, transform.position.y, transform.position.z);
+            Vector3 position = transform.position;
+            position.x = x;
+            transform.position = position;
         }
 
         /// <summary>
@@ -100,7 +102,9 @@ namespace Zigurous.Math
         /// <param name="y">The y-axis position to set.</param>
         public static void SetPositionY(this Transform transform, float y)
         {
-            transform.position = new Vector3(transform.position.x, y, transform.position.z);
+            Vector3 position = transform.position;
+            position.y = y;
+            transform.position = position;
         }
 
         /// <summary>
@@ -110,7 +114,9 @@ namespace Zigurous.Math
         /// <param name="z">The z-axis position to set.</param>
         public static void SetPositionZ(this Transform transform, float z)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, z);
+            Vector3 position = transform.position;
+            position.z = z;
+            transform.position = position;
         }
 
         /// <summary>
@@ -120,7 +126,9 @@ namespace Zigurous.Math
         /// <param name="x">The x-axis position to set.</param>
         public static void SetLocalPositionX(this Transform transform, float x)
         {
-            transform.localPosition = new Vector3(x, transform.localPosition.y, transform.localPosition.z);
+            Vector3 position = transform.localPosition;
+            position.x = x;
+            transform.localPosition = position;
         }
 
         /// <summary>
@@ -130,7 +138,9 @@ namespace Zigurous.Math
         /// <param name="y">The y-axis position to set.</param>
         public static void SetLocalPositionY(this Transform transform, float y)
         {
-            transform.localPosition = new Vector3(transform.localPosition.x, y, transform.localPosition.z);
+            Vector3 position = transform.localPosition;
+            position.y = y;
+            transform.localPosition = position;
         }
 
         /// <summary>
@@ -140,7 +150,9 @@ namespace Zigurous.Math
         /// <param name="z">The z-axis position to set.</param>
         public static void SetLocalPositionZ(this Transform transform, float z)
         {
-            transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, z);
+            Vector3 position = transform.localPosition;
+            position.z = z;
+            transform.localPosition = position;
         }
 
         /// <summary>
@@ -150,7 +162,9 @@ namespace Zigurous.Math
         /// <param name="x">The x-axis euler angle to set.</param>
         public static void SetEulerAnglesX(this Transform transform, float x)
         {
-            transform.eulerAngles = new Vector3(x, transform.eulerAngles.y, transform.eulerAngles.z);
+            Vector3 eulerAngles = transform.eulerAngles;
+            eulerAngles.x = x;
+            transform.eulerAngles = eulerAngles;
         }
 
         /// <summary>
@@ -160,7 +174,9 @@ namespace Zigurous.Math
         /// <param name="y">The y-axis euler angle to set.</param>
         public static void SetEulerAnglesY(this Transform transform, float y)
         {
-            transform.eulerAngles = new Vector3(transform.eulerAngles.x, y, transform.eulerAngles.z);
+            Vector3 eulerAngles = transform.eulerAngles;
+            eulerAngles.y = y;
+            transform.eulerAngles = eulerAngles;
         }
 
         /// <summary>
@@ -170,7 +186,9 @@ namespace Zigurous.Math
         /// <param name="z">The z-axis euler angle to set.</param>
         public static void SetEulerAnglesZ(this Transform transform, float z)
         {
-            transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, z);
+            Vector3 eulerAngles = transform.eulerAngles;
+            eulerAngles.z = z;
+            transform.eulerAngles = eulerAngles;
         }
 
         /// <summary>
@@ -180,7 +198,9 @@ namespace Zigurous.Math
         /// <param name="x">The x-axis euler angle to set.</param>
         public static void SetLocalEulerAnglesX(this Transform transform, float x)
         {
-            transform.localEulerAngles = new Vector3(x, transform.localEulerAngles.y, transform.localEulerAngles.z);
+            Vector3 eulerAngles = transform.localEulerAngles;
+            eulerAngles.x = x;
+            transform.localEulerAngles = eulerAngles;
         }
 
         /// <summary>
@@ -190,7 +210,9 @@ namespace Zigurous.Math
         /// <param name="y">The y-axis euler angle to set.</param>
         public static void SetLocalEulerAnglesY(this Transform transform, float y)
         {
-            transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, y, transform.localEulerAngles.z);
+            Vector3 eulerAngles = transform.localEulerAngles;
+            eulerAngles.y = y;
+            transform.localEulerAngles = eulerAngles;
         }
 
         /// <summary>
@@ -200,7 +222,9 @@ namespace Zigurous.Math
         /// <param name="z">The z-axis euler angle to set.</param>
         public static void SetLocalEulerAnglesZ(this Transform transform, float z)
         {
-            transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, z);
+            Vector3 eulerAngles = transform.localEulerAngles;
+            eulerAngles.z = z;
+            transform.localEulerAngles = eulerAngles;
         }
 
         /// <summary>
@@ -210,7 +234,9 @@ namespace Zigurous.Math
         /// <param name="x">The x-axis scale to set.</param>
         public static void SetLocalScaleX(this Transform transform, float x)
         {
-            transform.localScale = new Vector3(x, transform.localScale.y, transform.localScale.z);
+            Vector3 scale = transform.localScale;
+            scale.x = x;
+            transform.localEulerAngles = scale;
         }
 
         /// <summary>
@@ -220,7 +246,9 @@ namespace Zigurous.Math
         /// <param name="y">The y-axis scale to set.</param>
         public static void SetLocalScaleY(this Transform transform, float y)
         {
-            transform.localScale = new Vector3(transform.localScale.x, y, transform.localScale.z);
+            Vector3 scale = transform.localScale;
+            scale.y = y;
+            transform.localEulerAngles = scale;
         }
 
         /// <summary>
@@ -230,7 +258,9 @@ namespace Zigurous.Math
         /// <param name="z">The z-axis scale to set.</param>
         public static void SetLocalScaleZ(this Transform transform, float z)
         {
-            transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, z);
+            Vector3 scale = transform.localScale;
+            scale.z = z;
+            transform.localEulerAngles = scale;
         }
 
     }
