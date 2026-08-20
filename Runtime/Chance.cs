@@ -156,6 +156,38 @@ namespace Zigurous.Math
             return default;
         }
 
+        /// <summary>
+        /// Returns a random value from 3 weighted values.
+        /// </summary>
+        /// <typeparam name="T">The type of weighted value.</typeparam>
+        /// <param name="a">The first weighted value to roll from.</param>
+        /// <param name="b">The second weighted value to roll from.</param>
+        /// <param name="c">The third weighted value to roll from.</param>
+        /// <returns>A random weighted value.</returns>
+        public static T WeightedRoll<T>(T a, T b, T c) where T : IWeightedChance
+        {
+            int x = a.WeightedChance;
+            int y = b.WeightedChance;
+            int z = c.WeightedChance;
+
+            int weightedTotal = x + y + z;
+            int roll = UnityEngine.Random.Range(0, weightedTotal);
+
+            int min = 0;
+            int max = min + x;
+            if (x > 0 && roll >= min && roll < max) return a;
+
+            min = max;
+            max = min + y;
+            if (y > 0 && roll >= min && roll < max) return b;
+
+            min = max;
+            max = min + z;
+            if (z > 0 && roll >= min && roll < max) return c;
+
+            return default;
+        }
+
     }
 
     /// <summary>
